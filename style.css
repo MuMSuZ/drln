@@ -23,6 +23,8 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
+    flex-direction: row; /* Yatay hizalama */
+    justify-content: space-around; /* Linkleri aralıklı hizala */
     gap: 20px;
 }
 
