@@ -50,6 +50,7 @@ nav ul li a:hover, nav ul li a.active {
     position: relative;
     height: 100vh;
     background: url('background.png') no-repeat center center/cover;
+    background-size: contain;
     display: flex;
     align-items: center;
     justify-content: right;
