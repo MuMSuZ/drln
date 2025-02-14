@@ -9,7 +9,7 @@ body {
 nav {
     display: inline-block;
     background: black;
-    padding: 15px;
+    padding: 15px 30px;
     display: flex;
     justify-content: center;
     border-radius: 25px;
