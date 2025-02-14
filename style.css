@@ -51,7 +51,6 @@ nav ul li a:hover, nav ul li a.active {
     height: 100vh;
     background: url('background.png') no-repeat center center/cover;
     background-size: cover; /* Resmi ekran boyutuna göre ölçekle */
-    background-attachment: fixed; /* Parallax efekti için (isteğe bağlı) */
     display: flex;
     align-items: center;
     justify-content: right;
