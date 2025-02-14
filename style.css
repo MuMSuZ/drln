@@ -11,6 +11,7 @@ nav {
     padding: 15px;
     display: flex;
     justify-content: center;
+    border-radius: 25px;
 }
 
 nav ul {
