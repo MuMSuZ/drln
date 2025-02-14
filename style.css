@@ -52,8 +52,8 @@ nav ul li a:hover, nav ul li a.active {
     background: url('background.png') no-repeat center center/cover;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: right;
+    justify-content: right;
+    text-align: left;
     padding: 30px;
     color: white;
 }
