@@ -16,6 +16,7 @@ nav {
     display: flex;
     justify-content: center;
     border-radius: 25px;
+    z-index: 100; /* Öne getir */
 }
 
 nav ul {
