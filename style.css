@@ -122,3 +122,12 @@ nav ul li a:hover, nav ul li a.active {
 .container p {
     font-size: 30px;
 }
+
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #777;
+    padding-top: 20px;
+    background-color: #f4f4f4;
+    border-top: 1px solid #ddd;
+}
