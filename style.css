@@ -8,8 +8,8 @@ body {
 /* Navigasyon */
 nav {
     position: absolute; /* Sayfanın belirli bir yerine sabitlemek için */
-    top: 20px;  /* Üstten boşluk bırak */
-    right: 20px;  /* Sağ kenara yapıştır */
+    top: 40px;  /* Üstten boşluk bırak */
+    right: 30px;  /* Sağ kenara yapıştır */
     width: 40%;  /* Sayfanın 1/3'ü kadar genişlik */
     background: black;
     padding: 15px;
