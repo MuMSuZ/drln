@@ -99,7 +99,7 @@ nav ul li a:hover, nav ul li a.active {
     font-weight: bold;
 }
 
-.container {
+.container-back {
     width: 95%;  /* Sayfanın %80'ini kaplasın */
     max-width: 1200px; /* Maksimum genişlik */
     height: 800px; /* Yükseklik belirle */
@@ -115,17 +115,17 @@ nav ul li a:hover, nav ul li a.active {
     margin: 20px auto; /* Ortala */
 }
 
-.container h1 {
+.container-back h1 {
     font-size: 60px;
 }
 
-.container p {
+.container-back p {
     font-size: 30px;
 }
 
 footer {
     text-align: center;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     font-size: 0.9em;
     color: #777;
     padding-top: 20px;
