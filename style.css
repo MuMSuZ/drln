@@ -100,9 +100,9 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .container {
-    width: 80%;  /* Sayfanın %80'ini kaplasın */
+    width: 95%;  /* Sayfanın %80'ini kaplasın */
     max-width: 1200px; /* Maksimum genişlik */
-    height: 400px; /* Yükseklik belirle */
+    height: 800px; /* Yükseklik belirle */
     background: url('background.png') no-repeat center center;
     background-size: cover;
     border-radius: 15px; /* Köşeleri yuvarla */

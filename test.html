@@ -28,3 +28,24 @@
     </section>
 </body>
 </html>
+
+
+
+Eğer resmi arka plan olarak değil de normal <img> etiketiyle eklemek istiyorsan:
+
+<div class="container">
+    <img src="background.png" alt="Arka Plan Resmi">
+</div>
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.container img {
+    width: 100%; /* Container kadar geniş olsun */
+    height: auto; /* Oranı korusun */
+    border-radius: 15px; /* Köşeleri yuvarla */
+}
