@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+/* Header kısmı */
+
+header{
+    max-width: 1600px;
+    margin: 5px;
+}
+
+.container-header{
+    background: url(profil.png) no-repeat;
+    background-size: cover;
+    background-position: right top;
+    border-radius: 10px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: left;
+    padding: 50px;
+}
+
+.container-header h1{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.name{
+    font-size: 50px;
+    text-decoration: none;
+    box-shadow: 0px 3px 0px gray; /* Altında kırmızı bir gölge oluşturur */
+    padding-bottom: 2px;
+    width: 120%;
+}
+
+.work{
+    font-size: 30px;
+}
+
+/* Timeline kısmı */
+
+body{
+    background: #FFF5EE;
+}
+
+.timeline{
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+.container{
+    padding: 10px 10px 10px 30px;
+    margin: 10px;
+    position: relative;
+    width: 55%;
+    background: #CBC3E3;
+    border-radius: 20px;
+}
+
+.text-box{
+    padding: 20px 20px;
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.text-box h3{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.text-box small{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.text-box p{
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+/* Footer kısmı */
+
+footer {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    color: #777;
+    padding-top: 20px;
+    background-color: #f4f4f4;
+    border-top: 1px solid #ddd;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
