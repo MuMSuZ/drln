@@ -100,3 +100,44 @@ footer {
 footer p {
     margin-bottom: 10px;
 }
+
+/* Shape-box stili*/
+
+.shape-box{
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    max-width: 500px;
+    height: 430px;
+    margin: 30px 10px 30px;
+    box-shadow: 0 6px 30px 0 rgba(0, 0, 0, .12);
+    overflow: hidden;
+    width: 23.333%;
+}
+.shape-box_half{
+    overflow: hidden;
+    text-align: left;
+    position: relative;
+}
+.shape-box_half figcaption{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    padding: 0 30px 30px;
+    transition: transform .4s ease-in-out;
+    transform: translateY(100%);
+    z-index: 3;
+}
+
+.shape-box_half:hover figcaption {
+    transform: translateY(0);
+}
+.shape-box_half:hover figcaption .show-cont {
+    position: absolute;
+    bottom: calc(100% - 30px);
+    left: 30px;
+    right: 30px;
+    transition: bottom .4s;
+}
