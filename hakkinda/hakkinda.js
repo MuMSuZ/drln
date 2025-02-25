@@ -20,6 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Seçili butona "active" sınıfı ekle
         button.classList.add("active");
+
+         // İçeriğin olduğu kutuya otomatik olarak kaydır
+         contentBox.scrollIntoView({ behavior: "smooth", block: "start" });
     }
 
     buttons.forEach(button => {
