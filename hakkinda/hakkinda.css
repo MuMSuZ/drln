@@ -227,6 +227,40 @@ nav ul li a.active::after {
 }
 
 
+/* Serfitika kısmı */
+
+.container-sertifika {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 98%;
+    padding: 20px 0 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #E6E6FA; 
+
+}
+
+.sertifika {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Yatayda 3 sütun */
+    grid-template-rows: repeat(2, auto); /* Dikeyde 2 sıra */
+    gap: 15px; /* Resimler arası boşluk */
+    justify-content: center;
+}
+
+.sertifika img {
+    width: 100%; /* Resimler hücreye tam otursun */
+    height: auto;
+    border-radius: 10px; /* Köşeleri yuvarlat */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+    transition: transform 0.3s ease;
+}
+
+.sertifika img:hover {
+    transform: scale(1.05); /* Hover'da hafif büyütme efekti */
+}
+
+
 /* Footer kısmı */
 
 footer {
