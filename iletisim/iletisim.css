@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #e6ebfa;
+}
+
+/* Header kısmı */
+
+header{
+    max-width: 1600px;
+    margin: 5px;
+}
+
+.container-header{
+    background: url(profil.png) no-repeat;
+    background-size: cover;
+    background-position: right top;
+    border-radius: 10px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: left;
+    padding: 50px;
+}
+
+.container-header h1{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.name{
+    font-size: 50px;
+    text-decoration: none;
+    box-shadow: 0px 3px 0px gray; /* Altında kırmızı bir gölge oluşturur */
+    padding-bottom: 2px;
+    width: 120%;
+}
+
+.work{
+    font-size: 30px;
+}
+
+
+
+/* Navbar */
+
+nav {
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    width: 40%;
+    background: transparent; /* Transparan arka plan */
+    backdrop-filter: blur(10px); /* Blur efekti */
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    z-index: 100;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+}
+
+/* Menü listesi */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+/* Linkler */
+nav ul li a {
+    color: black;
+    text-shadow: #333;
+    font-size: 25px;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Efekti: Yazı büyüme ve alt çizgi animasyonu */
+nav ul li a:hover {
+    transform: scale(1.1); /* Yazıyı büyüt */
+    color: #0D98BA; /* Hafif renk değişimi */
+}
+
+/* Alt çizgi animasyonu */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0%; /* Başlangıçta görünmez */
+    height: 3px;
+    background: #0daaba; /* Çizgi rengi */
+    transition: width 0.3s ease-out, left 0.3s ease-out;
+}
+
+/* Hover olunca çizgi ortadan yanlara genişlesin */
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Aktif link */
+nav ul li a.active::after {
+    width: 100%;
+    left: 0;
+}
