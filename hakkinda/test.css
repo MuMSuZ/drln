@@ -75,10 +75,20 @@ header{
     border: none;
     padding: 10px 20px;
     margin-top: 10px;
+    margin-bottom: 0;
     cursor: pointer;
     font-size: 30px;
     position: relative;
     transition: 0.3s;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+/* Seçili buton içeriğin bir parçası gibi olacak */
+.date-btn.active {
+    background-color: #f5f7ff; /* İçerik kutusu ile aynı renk */
+    border-bottom: 2px solid #f5f7ff; /* Alt çizgi içeriğe kaynaşsın */
+    margin-bottom: 0;
 }
 
 .date-btn::after {
@@ -94,24 +104,20 @@ header{
 
 .date-btn:hover::after,
 .date-btn.active::after {
-    background-color: #007bff;
+    
     width: 100%;  /* Butona gelindiğinde veya tıklandığında çizgi genişler */
 }
 
 .content-box {
-    display: none;
     background: #f5f7ff;
     padding: 20px;
-    margin-top: 20px;
+    margin-top: 0;
     width: 90%;
     text-align: center;
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-/* Görünür hale gelmesi için aktif sınıf */
-.content-box.active {
-    display: block;
-}
+
 .content-box h2 {
     margin-bottom: 10px;
     font-size: 30px;
