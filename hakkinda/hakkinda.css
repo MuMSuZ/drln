@@ -71,7 +71,6 @@ header{
 
 .date-btn {
     background-color: transparent;
-    border-bottom: none;
     border: none;
     padding: 12px 24px;
     cursor: pointer;
@@ -80,17 +79,15 @@ header{
     transition: 0.3s;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    border-bottom-left-radius: 8px;
 }
 
 .date-btn.active {
     background-color: #fff; /* İçerik kutusundan biraz açık renk */
-    border-bottom: none; /* Alt çizgiyi kaldır, birleşsin 2px solid white*/
     border: 1px solid #ccc; /* Kenar çizgileri oluştur */
-    border-bottom: none; /* Alt çizgiyi kaldır */
+    border-bottom: none; /* Alt kenar çizgisini kaldır */
     z-index: 2; /* Butonun üstte kalmasını sağlar */
     position: relative;
-    border-radius: 8px 8px 0 0; /* Üst kenarları yuvarlat */
+    border-radius: 15px 15px 0 0; /* Üst kenarları yuvarlat */
     overflow: hidden; /* Taşmaları önlemek için */
     transform: translateX(-5%);
 }
@@ -102,7 +99,7 @@ header{
     padding: 60px;
     width: 90%;
     text-align: center;
-    border-radius: 0 0 12px 12px; /* Alt köşeleri yuvarlat */
+    border-radius: 12px; /* Alt köşeleri yuvarlat */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: -2px; /* Buton ile arasındaki boşluğu kapat */
     border-top: none;
@@ -152,14 +149,14 @@ header{
 
 footer {
     text-align: center;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    padding: 20px 20px 20px 20px;
     font-size: 0.9em;
     color: #777;
-    padding-top: 20px;
     background-color: #f4f4f4;
     border-top: 1px solid #ddd;
 }
 
 footer p {
-    margin-bottom: 10px;
+    margin-top: 5px;
 }
