@@ -70,6 +70,15 @@ header{
 }
 
 .date-btn {
+    /*background-color: transparent;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    position: relative;
+    transition: 0.3s;*/
     background-color: transparent;
     border-bottom: none;
     border: none;
@@ -95,9 +104,50 @@ header{
     transform: translateX(-5%);
 }
 
+.date-btn.active::after 
+    content: "";
+    position: absolute;
+    bottom: -10px; /* Butonun biraz aşağısına yerleştir */
+    left: 50%;
+    width: 50px; /* Kavis genişliği */
+    height: 15px; /* Kavis yüksekliği */
+    background-color: #fff; /* İçerik kutusu ile aynı renk */
+    border-radius: 50%; /* Tamamen yuvarlak yapılsın */
+    transform: translateX(-50%);
+}
+
+/*.date-btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;  Başlangıçta çizgi yok 
+    height: 3px;
+    background-color: transparent;
+    transition: width 0.3s ease-out;  Genişliği animasyonlu değiştir 
+}*/
+
+
+
+
+.date-btn:hover::after,
+.date-btn.active::after {
+    /*background-color: #007bff;*/
+    width: 100%;  /* Butona gelindiğinde veya tıklandığında çizgi genişler */
+}
+
+/*.content-box {
+    display: none;
+    background: #f5f7ff;
+    padding: 20px;
+    margin-top: 20px;
+    width: 90%;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}*/
 /* İçerik kutusu */
 .content-box {
-    display: none;
     background: #fff; /* İçerikten biraz koyu renk */
     padding: 60px;
     width: 90%;
@@ -142,8 +192,7 @@ header{
 
 .date-btn:hover[data-content="content1"] ~ .content-box #content1,
 .date-btn:hover[data-content="content2"] ~ .content-box #content2,
-.date-btn:hover[data-content="content3"] ~ .content-box #content3,
-.date-btn:hover[data-content="content4"] ~ .content-box #content4{
+.date-btn:hover[data-content="content3"] ~ .content-box #content3 {
     display: block; /* Sadece ilgili içeriği göster */
 }
 
@@ -162,4 +211,44 @@ footer {
 
 footer p {
     margin-bottom: 10px;
+}
+
+/* Timeline kısmı */
+
+
+.timeline{
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+.container{
+    padding: 10px 10px 10px 30px;
+    margin: 10px;
+    position: relative;
+    width: 55%;
+    background: #CBC3E3;
+    border-radius: 20px;
+}
+
+.text-box{
+    padding: 20px 20px;
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.text-box h3{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.text-box small{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.text-box p{
+    font-size: 25px;
+    margin-top: 10px;
 }
