@@ -1,9 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
     const buttons = document.querySelectorAll(".date-btn");
     const contents = document.querySelectorAll(".content");
+    const contentBox = document.querySelector(".content-box");
 
     function showContent(button) {
         const target = button.getAttribute("data-content");
+
+        // Eğer content-box gizliyse, aç
+        contentBox.classList.add("active");
 
         // Önce tüm içerikleri gizle
         contents.forEach(content => content.classList.remove("active"));
