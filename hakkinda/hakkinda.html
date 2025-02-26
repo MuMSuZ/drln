@@ -41,7 +41,7 @@
             </div>
             <div class="content-box">
                 <div id="content1" class="content active">
-                    <img src="amu-icon.png" alt="AMU">
+                    <img src="resim/amu-icon.png" alt="AMU">
                     <h2>Azerbaycan Tıp Üniversitesi</h2>
                     <h4>Eylül 2010 - Haziran 2016<hr></h4>
                     <p>Merhaba! Ben Bakü doğumlu bir kadın hastalıkları ve doğum  uzmanıyım.
@@ -81,12 +81,17 @@
         <div class="container-sertifika">
             <h2>Sertifikalar</h2>
             <div class="sertifika">
-                <img src="sertifika1.jpg" alt="sertifika1">
-                <img src="sertifika2.jpg" alt="sertifika2">
-                <img src="sertifika3.jpg" alt="sertifika3">
-                <img src="sertifika4.jpg" alt="sertifika4">
-                <img src="sertifika5.jpg" alt="sertifika5">
-                <img src="sertifika6.jpg" alt="sertifika6">
+                <img src="resim/sertifika1.png" alt="sertifika1">
+                <img src="resim/sertifika2.png" alt="sertifika2">
+                <img src="resim/sertifika3.png" alt="sertifika3">  
+                <img src="resim/sertifika4.png" alt="sertifika4">
+                <img src="resim/sertifika5.png" alt="sertifika5">
+                <img src="resim/sertifika6.png" alt="sertifika6">
+            </div>
+            <!-- Modal yapısı -->
+            <div id="modal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modal-img">
             </div>
         </div>
 
@@ -96,6 +101,7 @@
 
         <script src="hakkinda.js"></script>
 
+        
     </body>
 </html>
 
@@ -132,3 +138,14 @@
                 </div>
             </div>
         </div> -->
+
+        <!-- Lighbox HTML
+            <a href="resim/sertifika1.jpg" data-lightbox="sertifikalar">
+                <img src="sertifika1.jpg" alt="sertifika1">
+            </a>
+        -->
+        <!-- Lightbox CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+
+        <!-- Lightbox JS -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>

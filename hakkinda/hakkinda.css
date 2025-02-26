@@ -261,6 +261,7 @@ nav ul li a.active::after {
 }
 
 .sertifika {
+    background: linear-gradient(135deg, #fff, #FFB6C1);
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Yatayda 3 sütun */
     grid-template-rows: repeat(2, auto); /* Dikeyde 2 sıra */
@@ -278,6 +279,39 @@ nav ul li a.active::after {
 
 .sertifika img:hover {
     transform: scale(1.05); /* Hover'da hafif büyütme efekti */
+}
+
+/* Modal */
+
+.modal {
+    display: none; /* Başlangıçta gizli */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Arka planı koyulaştır */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 

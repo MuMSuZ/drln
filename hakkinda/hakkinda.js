@@ -30,3 +30,50 @@ document.addEventListener("DOMContentLoaded", () => {
         button.addEventListener("mouseenter", () => showContent(button)); // Hover ile aç
     });
 });
+
+// Modal açma ve kapatma
+
+document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modal-img");
+    const closeModal = document.querySelector(".close");
+
+    // Sayfa yüklendiğinde modalın kapalı olmasını sağla
+    modal.style.display = "none";
+
+    // Sertifika resimlerine tıklanınca modalı aç
+    document.querySelectorAll(".sertifika img").forEach(img => {
+        img.addEventListener("click", function () {
+            if (modal.style.display !== "flex") {
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+            }
+        });
+    });
+
+    // Kapatma butonuna tıklanınca modalı kapat
+    closeModal.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
+
+    // Modal dışında bir yere tıklanınca kapatma
+    modal.addEventListener("click", function (e) {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+});
+
+
+
+
+
+/* Resme tıklanda tam ekran yapma
+document.querySelectorAll(".sertifika img").forEach(img => {
+    img.addEventListener("click", function () {
+        if (this.requestFullscreen) {
+            this.requestFullscreen();
+        }
+    });
+});
+*/
