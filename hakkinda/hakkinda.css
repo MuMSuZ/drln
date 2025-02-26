@@ -250,6 +250,7 @@ nav ul li a.active::after {
 /* Serfitika kısmı */
 
 .container-sertifika {
+    background: linear-gradient(135deg, #fff, #FFB6C1);
     text-align: center;
     margin: 50px auto;
     max-width: 98%;
@@ -261,12 +262,14 @@ nav ul li a.active::after {
 }
 
 .sertifika {
-    background: linear-gradient(135deg, #fff, #FFB6C1);
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Yatayda 3 sütun */
     grid-template-rows: repeat(2, auto); /* Dikeyde 2 sıra */
     gap: 15px; /* Resimler arası boşluk */
     justify-content: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .sertifika img {
@@ -280,6 +283,17 @@ nav ul li a.active::after {
 .sertifika img:hover {
     transform: scale(1.05); /* Hover'da hafif büyütme efekti */
 }
+
+/* Resim Çerçevesi */
+
+.framed {
+    border: 20px solid #8B5A2B; /* Ahşap çerçeve rengi */
+    padding: 10px; /* İç boşluk */
+    background: #D2B48C; /* Çerçeve iç dolgusu */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Derinlik efekti */
+    border-radius: 5px;
+}
+
 
 /* Modal */
 
