@@ -21,8 +21,15 @@ document.addEventListener("DOMContentLoaded", () => {
         // Seçili butona "active" sınıfı ekle
         button.classList.add("active");
 
-         // İçeriğin olduğu kutuya otomatik olarak kaydır
-         contentBox.scrollIntoView({ behavior: "smooth", block: "start" });
+        // Butonun konumunu al
+        const buttonRect = button.getBoundingClientRect();
+        const offset = window.scrollY + buttonRect.top - 20; // Kayma miktarını ayarla
+
+        // İçeriğin olduğu kutuya otomatik olarak kaydır, ancak butonlar görünür kalacak
+        window.scrollTo({
+            top: offset,
+            behavior: "smooth",
+        });
     }
 
     buttons.forEach(button => {
@@ -30,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
         button.addEventListener("mouseenter", () => showContent(button)); // Hover ile aç
     });
 });
+
 
 // Modal açma ve kapatma
 
@@ -42,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
     modal.style.display = "none";
 
     // Sertifika resimlerine tıklanınca modalı aç
-    document.querySelectorAll(".sertifika img, .galeri img").forEach(img => {
+    document.querySelectorAll(".content-box img, .sertifika img, .galeri img").forEach(img => {
         img.addEventListener("click", function () {
             if (modal.style.display !== "flex") {
                 modal.style.display = "flex";
