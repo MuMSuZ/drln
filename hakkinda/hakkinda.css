@@ -168,7 +168,7 @@ nav ul li a.active::after {
     background-color: transparent;
     /*background: linear-gradient(135deg, #fff, #FFB6C1); /* İçerik kutusundan biraz açık renk */
     border: 2px solid #ccc; /* Kenar çizgileri oluştur */
-    box-shadow: 4px 0 4px 0 rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Hafif gölge */
     border-bottom: none; /* Alt kenar çizgisini kaldır */
     z-index: 2; /* Butonun üstte kalmasını sağlar */
     position: relative;
@@ -257,7 +257,6 @@ nav ul li a.active::after {
     padding: 20px 0 20px 0;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    background-color: #E6E6FA; 
 
 }
 
@@ -294,6 +293,55 @@ nav ul li a.active::after {
     border-radius: 5px;
 }
 
+/* Galeri kısmı */
+
+.container-galeri {
+    background: linear-gradient(135deg, #fff, #FFB6C1);
+    text-align: center;
+    margin: 50px auto;
+    max-width: 98%;
+    padding: 20px 0 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;  /* Taşmaları önlemek için */
+    position: relative;
+}
+
+/* Kaydırma alanı */
+.galeri-wrapper {
+    display: flex;
+    width: 200%; /* Resimleri iki kez tekrarlayarak sonsuz kaydırma yap */
+    animation: slide 20s linear infinite; /* Animasyonu çalıştır */
+}
+
+.galeri {
+    display: flex;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+/* Resimler */
+.galeri img {
+    width: 400px; /* Sabit genişlik */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.galeri img:hover {
+    transform: scale(1.05); /* Hover'da hafif büyütme efekti */
+}
+
+/* Kaydırma animasyonu */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Sol taraftan sağa kaydır */
+    }
+}
 
 /* Modal */
 
