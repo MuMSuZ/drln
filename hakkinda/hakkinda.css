@@ -216,8 +216,8 @@ nav ul li a.active::after {
     position: absolute;
     top: center;
     right: 50px;
-    width: 500px;
-    height: 400px;
+    width: 400px;
+    height: 300px;
     object-fit: fill;
     background-color: transparent;
 }
