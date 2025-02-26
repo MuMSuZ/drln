@@ -147,7 +147,7 @@ nav ul li a.active::after {
     align-items: center;
     gap: 20px;
     border-bottom: none;
-    padding-bottom: 3px;
+    padding-bottom: 1px;
 }
 
 .date-btn {
@@ -167,14 +167,14 @@ nav ul li a.active::after {
 .date-btn.active {
     background-color: transparent;
     /*background: linear-gradient(135deg, #fff, #FFB6C1); /* İçerik kutusundan biraz açık renk */
-    border: none; /* Kenar çizgileri oluştur */
+    border: 2px solid #ccc; /* Kenar çizgileri oluştur */
+    box-shadow: 4px 0 4px 0 rgba(0, 0, 0, 0.1); /* Hafif gölge */
     border-bottom: none; /* Alt kenar çizgisini kaldır */
-    box-shadow: 4px 0 12px 2px #ccc;
-    z-index: 1; /* Butonun üstte kalmasını sağlar */
+    z-index: 2; /* Butonun üstte kalmasını sağlar */
     position: relative;
     border-radius: 15px 15px 0 0; /* Üst kenarları yuvarlat */
     overflow: hidden; /* Taşmaları önlemek için */
-    transform: translateX(-5%);
+    transform: translateX(-7%);
 }
 
 /* İçerik kutusu */
@@ -188,8 +188,8 @@ nav ul li a.active::after {
     border-radius: 12px; /* Alt köşeleri yuvarlat */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: -3px; /* Buton ile arasındaki boşluğu kapat */
-    border-top: none;
-    z-index: 2;
+    border: 2px solid #ccc; /* Kenar çizgileri oluştur */
+    z-index: 1;
 }
 
 .content-box img {
