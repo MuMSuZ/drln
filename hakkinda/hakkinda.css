@@ -129,9 +129,8 @@ nav ul li a.active::after {
 
 
 .container-sekme {
+    background: linear-gradient(135deg, #fff, #FFB6C1);
     display: flex;
-    background-image: url(amu.png) no-repeat;
-    background-size: cover;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -140,14 +139,14 @@ nav ul li a.active::after {
     padding: 20px 0 20px 0;
     border-radius: 8px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
-    /*background-color: #E6E6FA;*/
+    background-color: #E6E6FA;
 }
 
 .dates {
     display: flex;
     align-items: center;
     gap: 20px;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 1px solid #ddd;
     padding-bottom: 1px;
 }
 
@@ -166,9 +165,11 @@ nav ul li a.active::after {
 }
 
 .date-btn.active {
-    background-color: #fff; /* İçerik kutusundan biraz açık renk */
-    border: 1px solid #ccc; /* Kenar çizgileri oluştur */
+    background-color: transparent;
+    /*background: linear-gradient(135deg, #fff, #FFB6C1); /* İçerik kutusundan biraz açık renk */
+    border: 3px solid #ccc; /* Kenar çizgileri oluştur */
     border-bottom: none; /* Alt kenar çizgisini kaldır */
+    box-shadow: 10px 0 12px 2px #ccc;
     z-index: 2; /* Butonun üstte kalmasını sağlar */
     position: relative;
     border-radius: 15px 15px 0 0; /* Üst kenarları yuvarlat */
@@ -178,17 +179,23 @@ nav ul li a.active::after {
 
 /* İçerik kutusu */
 .content-box {
-    display: none;
-    /*background: #fff;  İçerikten biraz koyu renk */
-    
+    display: none; /* İçeriği başlangıçta gizle */
+    position: relative; /* İçindeki absolute öğeler için referans noktası */
+    /*background: linear-gradient(135deg, #fff, #FFB6C1); /* Arka plan rengi */
     padding: 60px;
     width: 90%;
-    text-align: center;
+    text-align: left;
     border-radius: 12px; /* Alt köşeleri yuvarlat */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: -3px; /* Buton ile arasındaki boşluğu kapat */
     border-top: none;
     z-index: 1;
+}
+
+.content-box img {
+    align-items: flex-end;
+    justify-content: flex-end;
+    position: static;
 }
 
 
@@ -207,7 +214,11 @@ nav ul li a.active::after {
     color: #777;
 }
 .content-box p {
+    width: 50%;
+    margin-top: 20px;
     font-size: 22px;
+    line-height: 1.6;
+    text-align: justify;
 }
 
 
