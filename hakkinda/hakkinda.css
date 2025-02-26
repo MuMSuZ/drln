@@ -130,15 +130,17 @@ nav ul li a.active::after {
 
 .container-sekme {
     display: flex;
+    background-image: url(amu.png) no-repeat;
+    background-size: cover;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    width: 99%;
+    width: 98%;
     padding: 20px 0 20px 0;
     border-radius: 8px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
-    background-color: #E6E6FA;
+    /*background-color: #E6E6FA;*/
 }
 
 .dates {
@@ -177,7 +179,8 @@ nav ul li a.active::after {
 /* İçerik kutusu */
 .content-box {
     display: none;
-    background: #fff; /* İçerikten biraz koyu renk */
+    /*background: #fff;  İçerikten biraz koyu renk */
+    
     padding: 60px;
     width: 90%;
     text-align: center;
@@ -187,6 +190,8 @@ nav ul li a.active::after {
     border-top: none;
     z-index: 1;
 }
+
+
 /* Görünür hale gelmesi için aktif sınıf */
 .content-box.active {
     display: block;
@@ -233,7 +238,7 @@ nav ul li a.active::after {
 .container-sertifika {
     text-align: center;
     margin: 50px auto;
-    max-width: 99%;
+    max-width: 98%;
     padding: 20px 0 20px 0;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
