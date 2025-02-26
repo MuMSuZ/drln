@@ -260,6 +260,12 @@ nav ul li a.active::after {
 
 }
 
+.container-sertifika h2 {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
 .sertifika {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Yatayda 3 sütun */
@@ -281,6 +287,7 @@ nav ul li a.active::after {
 
 .sertifika img:hover {
     transform: scale(1.05); /* Hover'da hafif büyütme efekti */
+    cursor: pointer;
 }
 
 /* Resim Çerçevesi */
@@ -307,11 +314,17 @@ nav ul li a.active::after {
     position: relative;
 }
 
+.container-galeri h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
 /* Kaydırma alanı */
 .galeri-wrapper {
     display: flex;
     width: 200%; /* Resimleri iki kez tekrarlayarak sonsuz kaydırma yap */
-    animation: slide 20s linear infinite; /* Animasyonu çalıştır */
+    animation: slide 30s linear infinite; /* Animasyonu çalıştır */
 }
 
 .galeri {
@@ -321,16 +334,20 @@ nav ul li a.active::after {
 }
 
 /* Resimler */
+
 .galeri img {
-    width: 400px; /* Sabit genişlik */
-    height: auto;
+    width: 450px; /* Sabit genişlik */
+    height: 350px; /* Sabit yükseklik */
+    object-fit: fill; /* Resmi kırpma */
     border-radius: 10px;
+    margin: 20px 0 20px 0;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 }
 
 .galeri img:hover {
-    transform: scale(1.05); /* Hover'da hafif büyütme efekti */
+    transform: scale(1.15); /* Hover'da hafif büyütme efekti */
+    cursor: pointer;
 }
 
 /* Kaydırma animasyonu */

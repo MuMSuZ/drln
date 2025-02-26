@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     modal.style.display = "none";
 
     // Sertifika resimlerine tıklanınca modalı aç
-    document.querySelectorAll(".sertifika img").forEach(img => {
+    document.querySelectorAll(".sertifika img, .galeri img").forEach(img => {
         img.addEventListener("click", function () {
             if (modal.style.display !== "flex") {
                 modal.style.display = "flex";
