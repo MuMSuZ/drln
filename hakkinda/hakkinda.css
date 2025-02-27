@@ -17,7 +17,7 @@ header{
 }
 
 .container-header{
-    background: url(profil.png) no-repeat;
+    background: url(resim/profil.png) no-repeat;
     background-size: cover;
     background-position: right top;
     border-radius: 10px;
