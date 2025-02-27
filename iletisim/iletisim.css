@@ -54,7 +54,7 @@ nav {
     position: absolute;
     top: 40px;
     right: 30px;
-    width: 40%;
+    width: 45%;
     background: transparent; /* Transparan arka plan */
     backdrop-filter: blur(10px); /* Blur efekti */
     padding: 15px;
