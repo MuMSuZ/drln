@@ -214,9 +214,9 @@ nav ul li a.active::after {
 
 .img-content2 {
     position: absolute;
-    top: 100px;
+    top: 115px;
     right: 50px;
-    width: 400px;
+    width: 350px;
     height: 300px;
     object-fit: fill;
     background-color: transparent;
@@ -224,9 +224,19 @@ nav ul li a.active::after {
 
 .img-content3 {
     position: absolute;
-    top: 100px;
+    top: 115px;
     right: 50px;
-    width: 400px;
+    width: 350px;
+    height: 300px;
+    object-fit: fill;
+    background-color: transparent;
+}
+
+.img-content4 {
+    position: absolute;
+    top: 115px;
+    right: 50px;
+    width: 350px;
     height: 300px;
     object-fit: fill;
     background-color: transparent;
