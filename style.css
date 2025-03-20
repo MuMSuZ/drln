@@ -13,7 +13,7 @@ nav {
     right: 30px;
     width: 45%;
     background: transparent; /* Transparan arka plan */
-    backdrop-filter: blur(10px); /* Blur efekti */
+    backdrop-filter: blur(60px); /* Blur efekti */
     padding: 15px;
     display: flex;
     justify-content: center;
@@ -122,7 +122,7 @@ nav ul li a.active::after {
     text-decoration: none;
     border-radius: 25px;
     font-size: 22px;
-    margin-top: 15px;
+    margin-top: 150px;
 }
 
 .btn:hover {
@@ -137,24 +137,24 @@ nav ul li a.active::after {
 
 .container-back {
     height: 100vh; /* Yüksekliği tam ekran yap */
-    background: url(hakkinda/profil.png) no-repeat;
+    background: url(background3.jpg) no-repeat;
     background-size: cover;
     background-position: right top;
     border-radius: 10px; /* Köşeleri yuvarla */
     padding: 50px;
     display: flex;
-    align-items: center;
-    justify-content: right;
+    align-items: top;
+    justify-content: left;
     color: white;
     text-align: left;
 }
 
 .container-back h1 {
-    font-size: 60px;
+    font-size: 50px;
 }
 
 .container-back p {
-    font-size: 30px;
+    font-size: 25px;
 }
 
 footer {
