@@ -116,7 +116,7 @@ nav ul li a.active::after {
 /* Randevu Butonu */
 .btn {
     display: inline-block;
-    background: #0044cc;
+    background: #0D98BA;
     color: white;
     padding: 15px 30px;
     text-decoration: none;
@@ -126,7 +126,7 @@ nav ul li a.active::after {
 }
 
 .btn:hover {
-    background: #002288;
+    background: #0daaba;
 }
 
 /* Giriş Butonu */
