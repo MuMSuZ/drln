@@ -84,7 +84,7 @@ nav ul li a.active::after {
 .hero {
     position: relative;
     height: 100vh;
-    background: url(background.png) no-repeat;
+    background: url(background.jpg) no-repeat;
     background-size: cover;
     background-position: right top;
     display: flex;
