@@ -370,7 +370,7 @@ nav ul li a.active::after {
 .galeri-wrapper {
     display: flex;
     width: 200%; /* Resimleri iki kez tekrarlayarak sonsuz kaydırma yap */
-    animation: slide 40s linear infinite; /* Animasyonu çalıştır */
+    animation: slide 30s linear infinite; /* Animasyonu çalıştır */
 }
 
 .galeri {
@@ -382,8 +382,8 @@ nav ul li a.active::after {
 /* Resimler */
 
 .galeri img {
-    width: 450px; /* Sabit genişlik */
-    height: 350px; /* Sabit yükseklik */
+    width: 350px; /* Sabit genişlik */
+    height: 400px; /* Sabit yükseklik */
     object-fit: fill; /* Resmi kırpma */
     border-radius: 10px;
     margin: 20px 0 20px 0;
