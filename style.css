@@ -157,6 +157,254 @@ nav ul li a.active::after {
     font-size: 25px;
 }
 
+/* Galeri kısmı */
+
+.container-galeri {
+    background: linear-gradient(135deg, #fff, #FFB6C1);
+    text-align: center;
+    margin: 50px auto;
+    max-width: 98%;
+    padding: 20px 0 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;  /* Taşmaları önlemek için */
+    position: relative;
+}
+
+.container-galeri h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+/* Kaydırma alanı */
+.galeri-wrapper {
+    display: flex;
+    width: 200%; /* Resimleri iki kez tekrarlayarak sonsuz kaydırma yap */
+    animation: slide 30s linear infinite; /* Animasyonu çalıştır */
+}
+
+.galeri {
+    display: flex;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+/* Resimler */
+
+.galeri img {
+    width: 350px; /* Sabit genişlik */
+    height: 400px; /* Sabit yükseklik */
+    object-fit: fill; /* Resmi kırpma */
+    border-radius: 10px;
+    margin: 20px 0 20px 0;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.galeri img:hover {
+    transform: scale(1.15); /* Hover'da hafif büyütme efekti */
+    cursor: pointer;
+}
+
+/* Kaydırma animasyonu */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Sol taraftan sağa kaydır */
+    }
+}
+
+/* Modal */
+
+.modal {
+    display: none; /* Başlangıçta gizli */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Arka planı koyulaştır */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Uzmanlık Alanları kısmı*/
+/* Kartlar */
+
+.container-uzmanlik {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.uzmanlik-kart {
+    background-color: linear-gradient(135deg, #fff, #FFB6C1);
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.kart-resim {
+    width: 400px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+.kart-baslik {
+    position: absolute;
+    bottom: 0;
+    padding: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    text-align: left;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    transition: 0.3s;
+}
+
+.uzmanlik-kart:hover .kart-baslik {
+    display: none;
+}
+
+.kart-icerik {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.uzmanlik-kart:hover .kart-icerik {
+    transform: translateY(0);
+}
+
+.uzmanlik-kart p {
+    font-size: 22px;
+    padding: 10px 0;
+    margin: 10px 0;
+}
+
+/* From Uiverse.io by cssbuttons-io */ 
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+   }
+   
+   button.btn-detay {
+    width: 12rem;
+    height: auto;
+   }
+   
+   button.btn-detay .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #282936;
+    border-radius: 1.625rem;
+   }
+   
+   button.btn-detay .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+   }
+   
+   button.btn-detay .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+   }
+   
+   button.btn-detay .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+   }
+   
+   button.btn-detay .button-detay-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #282936;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+   }
+   
+   button:hover .circle {
+    width: 100%;
+   }
+   
+   button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+   }
+   
+   button:hover .button-detay-text {
+    color: #fff;
+   }
+
 footer {
     text-align: center;
     margin-bottom: 10px;
