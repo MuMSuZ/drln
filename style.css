@@ -107,7 +107,7 @@ nav ul li a.active::after {
     text-decoration: none;
     border-radius: 25px;
     font-size: 22px;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 .btn:hover {
