@@ -203,26 +203,24 @@
 
     <!-- Yorumlar --> 
 
-      <section class="yorumlar-container">
-        <h2><i class="fas fa-comment-dots"></i> Hastalarımız Ne Diyor?</h2>
-        <div class="yorumlar-slider">
-          <div class="yorum-kart">
-            <p class="yorum-metin">“Doktor hanım çok ilgiliydi, tüm sorularımı yanıtladı.”</p>
-            <div class="puanlama">⭐⭐⭐⭐☆</div>
-            <div class="yorum-footer">
-              <span class="hasta-isim">– A.B.</span>
-            </div>
-          </div>
-          <div class="yorum-kart">
-            <p class="yorum-metin">“Klinik çok temizdi, güler yüzlü bir ekip vardı.”</p>
-            <div class="puanlama">⭐⭐⭐⭐☆</div>
-            <div class="yorum-footer">
-              <span class="hasta-isim">– Z.Y.</span>
-            </div>
-          </div>
-          <!-- Daha fazla yorum... -->
-        </div>
-      </section>
+    <!-- Firebase SDK'ları -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore-compat.js"></script>
+
+
+  <section class="yorumlar-container">
+    <h2>Hastalarımız Ne Diyor?</h2>
+
+    <!-- Form -->
+    <form id="yorumForm">
+      <input type="text" id="isim" placeholder="Adınız (isteğe bağlı)">
+      <textarea id="yorum" placeholder="Yorumunuzu yazın..." required></textarea>
+      <button type="submit">Gönder</button>
+    </form>
+
+    <!-- Yorumlar -->
+    <div class="yorumlar-slider" id="yorumListesi"></div>
+  </section>
       
       
       
