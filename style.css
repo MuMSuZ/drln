@@ -117,7 +117,7 @@ nav ul li a.active::after {
 
 .container-back {
     height: 100vh; /* Yüksekliği tam ekran yap */
-    background: url(background.jpg) no-repeat;
+    background: url(background66.jpg) no-repeat;
     background-size: cover;
     background-position: right top;
     border-radius: 10px; /* Köşeleri yuvarla */
