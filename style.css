@@ -80,40 +80,25 @@ nav ul li a.active::after {
 }
 
 
-/* Hero Bölümü */
-.hero {
-    position: relative;
-    height: 100vh;
-    background: url(background.jpg) no-repeat;
-    background-size: cover;
-    background-position: right top;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    text-align: left;
-    padding: 10px;
-    color: white;
-}
-
-.hero .content {
-    max-width: 600px;
-}
-
-.hero h1 {
-    font-size: 60px;
-    margin: 0;
-}
-
-.hero h1 span {
-    font-weight: bold;
-}
-
-.hero p {
-    font-size: 30px;
-    margin: 10px 0;
-}
-
 /* Randevu Butonu */
+.btn-randevu {
+    display: inline-block;
+    position: absolute;
+    left: 50px;
+    bottom: 40px;
+    background: #0D98BA;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 22px;
+}
+
+.btn-randevu:hover {
+    background: #0daaba;
+}
+
+/* Yakından tanı butonu*/
 .btn {
     display: inline-block;
     background: #0D98BA;
@@ -122,18 +107,13 @@ nav ul li a.active::after {
     text-decoration: none;
     border-radius: 25px;
     font-size: 22px;
-    margin-top: 150px;
+    margin-top: 100px;
 }
 
 .btn:hover {
     background: #0daaba;
 }
 
-/* Giriş Butonu */
-.login {
-    color: #0044cc !important;
-    font-weight: bold;
-}
 
 .container-back {
     height: 100vh; /* Yüksekliği tam ekran yap */
@@ -155,6 +135,14 @@ nav ul li a.active::after {
 
 .container-back p {
     font-size: 25px;
+}
+
+.randevu {
+    display: inline-block;
+    position: absolute;
+    right: 50px;
+    top: 215px;
+
 }
 
 /* Galeri kısmı */
