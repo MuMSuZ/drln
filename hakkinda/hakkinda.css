@@ -758,7 +758,7 @@ footer p {
 
     /* Galeri */
     .galeri img {
-        width: 90vw;
+        width: 40vw;
         height: auto;
     }
 
@@ -772,6 +772,15 @@ footer p {
     .galeri {
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    @keyframes slide {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%); /* Sol taraftan sağa kaydır */
+        }
     }
 
 }
