@@ -758,7 +758,7 @@ footer p {
 
     /* Galeri */
     .galeri img {
-        width: 40vw;
+        width: 50vw;
         height: auto;
     }
 
@@ -767,6 +767,7 @@ footer p {
         animation: none;
         flex-wrap: wrap;
         justify-content: center;
+        animation: slide 30s linear infinite;
     }
 
     .galeri {
