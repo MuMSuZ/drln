@@ -628,6 +628,9 @@ footer p {
     margin-top: 5px;
 }
 
+.menu-toggle {
+    display: none;
+}
 
 
 /* Mobil uyumlu tasarım */
@@ -639,19 +642,20 @@ footer p {
         align-items: flex-end;
         justify-content: center;
         padding: 10px;
-        height: auto;
+        height: 200px;
         text-align: left;
-        height: 40vh;
+        
     }
 
     .container-header h1,
     .name {
-        font-size: 25px;
-        width: 55%;
+        font-size: 18px;
+        width: 50%;
+        margin-top: 40px;
     }
 
     .work {
-        font-size: 15px;
+        font-size: 12px;
     }
 
     /* Navbar */
