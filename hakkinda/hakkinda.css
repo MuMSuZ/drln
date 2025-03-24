@@ -636,6 +636,10 @@ footer p {
     display: none;
 }
 
+.egitim-mobile {
+    display: none;
+}
+
 
 /* Mobil uyumlu tasarım */
 @media (max-width: 768px) {
@@ -711,6 +715,49 @@ footer p {
         color: white;
     }
 
+    /* Eğitim bilgileri */
+    .container-sekme {
+        display: none; /* Sekmeli görünüm mobilde gizlenir */
+    }
+
+    .egitim-mobile {
+        display: block;
+        padding: 5px;
+        width: 100%;
+        margin: 0;
+    }
+
+    .egitim-card {
+        background: linear-gradient(135deg, #fff, #FFB6C1);
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .egitim-card img {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+        border-radius: 8px;
+    }
+
+    .egitim-card h2 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .egitim-card h4 {
+        font-size: 14px;
+        color: #888;
+        margin-bottom: 10px;
+    }
+
+    .egitim-card p {
+        font-size: 16px;
+        text-align: justify;
+    }
     
 
     /* Sertifika grid mobil için */
