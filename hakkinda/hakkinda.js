@@ -78,8 +78,6 @@ function toggleMenu() {
     menu.classList.toggle('show');
 }
 
-
-
 /* Resme tıklanda tam ekran yapma
 document.querySelectorAll(".sertifika img").forEach(img => {
     img.addEventListener("click", function () {
@@ -89,3 +87,5 @@ document.querySelectorAll(".sertifika img").forEach(img => {
     });
 });
 */
+
+

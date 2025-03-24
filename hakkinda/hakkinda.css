@@ -366,12 +366,7 @@ nav ul li a.active::after {
     font-size: 30px;
 }
 
-/* Kaydırma alanı */
-.galeri-wrapper {
-    display: flex;
-    width: 200%; /* Resimleri iki kez tekrarlayarak sonsuz kaydırma yap */
-    animation: slide 30s linear infinite; /* Animasyonu çalıştır */
-}
+
 
 .galeri {
     display: flex;
@@ -396,6 +391,13 @@ nav ul li a.active::after {
     cursor: pointer;
 }
 
+/* Kaydırma alanı */
+.galeri-wrapper {
+    display: flex;
+    width: 200%; /* Resimleri iki kez tekrarlayarak sonsuz kaydırma yap */
+    animation: slide 30s linear infinite; /* Animasyonu çalıştır */
+} 
+
 /* Kaydırma animasyonu */
 @keyframes slide {
     0% {
@@ -405,6 +407,8 @@ nav ul li a.active::after {
         transform: translateX(-50%); /* Sol taraftan sağa kaydır */
     }
 }
+
+
 
 /* Modal */
 
@@ -638,6 +642,9 @@ footer p {
     
     /* Header alanı */
     .container-header {
+        background: url(resim/background33.jpg) no-repeat;
+        background-size: cover;
+        background-position: right top;
         flex-direction: column;
         align-items: flex-end;
         justify-content: center;
@@ -760,28 +767,25 @@ footer p {
     .galeri img {
         width: 50vw;
         height: auto;
+        transition: transform 0.3s ease;
+        margin: 10px 0 10px 0;
     }
 
+    /* Otomatik kaydırma kaldırılıyor */
     .galeri-wrapper {
-        width: 100%;
-        animation: none;
-        flex-wrap: wrap;
-        justify-content: center;
-        animation: slide 30s linear infinite;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        display: flex;
+        scroll-behavior: smooth;
     }
 
+    .galeri-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+    
     .galeri {
         flex-wrap: wrap;
         justify-content: center;
     }
-
-    @keyframes slide {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-50%); /* Sol taraftan sağa kaydır */
-        }
-    }
-
 }
