@@ -596,6 +596,7 @@ button {
    
    button:hover .button-detay-text {
     color: #fff;
+    text-decoration: none;
    }
 /*.detay-btn {
     display: inline-block;
