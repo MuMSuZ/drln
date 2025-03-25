@@ -769,6 +769,7 @@ footer p {
     /* Uzmanlık kartları */
     .container-uzmanlik {
         grid-template-columns: 1fr;
+        width: 98%;
     }
 
     .kart-resim {
