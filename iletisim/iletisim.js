@@ -1,7 +1,7 @@
 function toggleMenu() {
     const menu = document.querySelector(".menu");
     menu.classList.toggle("active");
-  }
+  }  
   
 
   document.getElementById("iletisimFormu").addEventListener("submit", function (e) {

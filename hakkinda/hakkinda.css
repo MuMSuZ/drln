@@ -122,6 +122,12 @@ nav ul li a.active::after {
     left: 0;
 }
 
+/* Aktif menü stili */
+nav ul.menu li a.aktif {
+    border-bottom: 2px solid #fff;
+    font-weight: bold;
+  }
+
 
 
 
