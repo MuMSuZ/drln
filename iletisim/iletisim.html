@@ -3,10 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Op Dr Leman Nabiyeva, kadın doğum uzmanı Şişli, kadın hastalıkları uzmanı, Türkiye Hastanesi doktorları, İstanbul kadın doğum doktoru, gebelik takibi, doğum uzmanı, jinekolog İstanbul, genital estetik, vajinal estetik, laparoskopik cerrahi, opdrlemannabiyeva, drlemannabiyeva, dr leman nabiyeva, leman nabiyeva, dr laman nabiyeva, kadın hastaları ve doğum uzmanı, uzman doktor, kadın doğumcu, dr leman nabiyeva iletişim, dr leman nabiyeva iletisim">
+    <meta name="author" content="MuMSuZ">
+    <meta name="description" content="Op. Dr. Leman NABIYEVA, İstanbul Şişli'de Türkiye Hastanesi'nde hizmet veren deneyimli Kadın Hastalıkları ve Doğum Uzmanıdır. Gebelik takibi, doğum, jinekolojik tedaviler ve genital estetik konularında uzman desteği için hemen iletişime geçin.">
+    
     <title>Op. Dr. Leman NABIYEVA | İletişim</title>
+    
     <link rel="stylesheet" href="iletisim.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="icon" type="image/png" sizes="48x48" href="resim/favicon_48.png">
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Physician",
+          "name": "Op. Dr. Leman Nabiyeva",
+          "description": "Kadın Hastalıkları ve Doğum Uzmanı, Türkiye Hastanesi - Şişli / İstanbul",
+          "medicalSpecialty": [
+            "Obstetrics",
+            "Gynecology",
+            "Prenatal Care",
+            "Minimally Invasive Surgery",
+            "Genital Esthetics"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Darülaceze Cad. 14/1, Merkez Mahallesi",
+            "addressLocality": "Şişli",
+            "addressRegion": "İstanbul",
+            "postalCode": "34381",
+            "addressCountry": "TR"
+          },
+          "telephone": "+90 212 314 14 14",
+          "email": "info@turkiyehastanesi.com",
+          "url": "https://mumsuz.github.io/drln",
+          "image": "https://mumsuz.github.io/drln/resim/doctor-profile.jpg",
+          "availableService": {
+            "@type": "MedicalProcedure",
+            "name": "Gebelik Takibi, Doğum, Jinekolojik Muayene, Genital Estetik, HPV Tedavisi"
+          }
+        }
+        </script>
+        
 </head>
 <body>
     <header>
@@ -19,14 +57,51 @@
             
         </div>
         <nav id="body">
-            <ul>
+            <!-- Menü Toggle Butonu (Hamburger ikon) -->
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="menu">
                 <li><a href="https://mumsuz.github.io/drln/index.html">Anasayfa</a></li>
                 <li><a href="https://mumsuz.github.io/drln/hakkinda/hakkinda.html">Hakkında</a></li>
                 <li><a href="https://mumsuz.github.io/drln/iletisim/iletisim.html">İletişim</a></li>
-                <li><a href="sss.html">SSS</a></li>
+                <li><a href="https://mumsuz.github.io/drln/blog/blog.html">Blog</a></li>
             </ul>
         </nav>
     </header>
+
+        <section class="iletisim-bilgileri">
+            <h2>İletişim Bilgileri</h2>
+            <p><strong>Adres:</strong> Merkez Mah. Darülaceze Cad. 14/1, Şişli/İstanbul</p>
+            <p><strong>Telefon:</strong> <a href="tel:+902123141414">+90 (212) 314 14 14</a></p>
+            <p><strong>E-posta:</strong> <a href="mailto:info@turkiyehastanesi.com">info@turkiyehastanesi.com</a></p>
+        </section>
+        
+        <section class="iletisim-formu">
+            <h2>İletişim Formu</h2>
+            <form action="iletisim.php" method="post">
+                <label for="isim">Adınız Soyadınız:</label>
+                <input type="text" id="isim" name="isim" required>
+        
+                <label for="email">E-posta Adresiniz:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="mesaj">Mesajınız:</label>
+                <textarea id="mesaj" name="mesaj" rows="5" required></textarea>
+        
+                <button type="submit">Gönder</button>
+            </form>
+        </section>
+
+        <section class="harita">
+            <h2>Konumumuz</h2>
+            <div class="harita-kapsayici">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.0000000000005!2d28.980000000000004!3d41.050000000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab00000000000%3A0x0000000000000000!2sT%C3%BCrkiye%20Hastanesi!5e0!3m2!1str!2str!4v1610000000000"
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </section>
+        
+        
 
 
 
