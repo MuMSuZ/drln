@@ -48,8 +48,8 @@ header{
   
 .insta-buton {
     position: absolute;
-    bottom: 80px;
-    right: 80px;
+    bottom: 60px;
+    right: 60px;
     background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
     padding: 8px 14px;
     border-radius: 20px;
@@ -57,7 +57,7 @@ header{
     color: white;
     font-weight: 500;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
+    transition: transform 0.3s ease;
 }
   
 .insta-buton:hover {
@@ -76,7 +76,40 @@ header{
     font-size: 32px;
 }
   
-
+@media (max-width: 768px) {
+    .container-header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+      height: auto;
+      text-align: left;
+    }
+  
+    .container-header h1,
+    .name {
+      font-size: 32px;
+    }
+  
+    .work {
+      font-size: 20px;
+    }
+  
+    .insta-buton {
+      position: relative;
+      width: 20px;
+      margin-top: 20px;
+      bottom: unset;
+      right: unset;
+      align-self: flex-start;
+      font-size: 16px;
+      padding: 6px 10px;
+    }
+  
+    .insta-buton a i {
+      font-size: 20px;
+    }
+}
+  
 
 /* ---------------------------------- Navbar ----------------------------- */
 
