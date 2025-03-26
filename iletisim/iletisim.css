@@ -188,45 +188,38 @@ nav ul.menu li a.aktif {
 
 /* ---------------------------- İletişim bilgileri -------------------------- */
 
-.iletisim-bilgileri {
-    max-width: 800px;
+.iletisim-bilgileri-kapsayici {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1000px;
     margin: 40px auto;
     padding: 30px;
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.05);
 }
   
-.iletisim-bilgileri h2 {
+.bilgi-kolon {
+    flex: 1 1 300px;
+}
+  
+.bilgi-kolon h2 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #444;
     border-bottom: 2px solid #6c63ff;
     display: inline-block;
     padding-bottom: 5px;
+    color: #444;
 }
   
-.iletisim-bilgileri ul {
+.bilgi-kolon ul {
     list-style: none;
     padding: 0;
 }
   
-.iletisim-bilgileri li {
-    margin-bottom: 15px;
-    font-size: 16px;
-    line-height: 1.6;
-}
-  
-.iletisim-bilgileri a {
-    color: #6c63ff;
-    text-decoration: none;
-}
-  
-.iletisim-bilgileri a:hover {
-    text-decoration: underline;
-}
-  
-.iletisim-bilgileri ul li {
+.bilgi-kolon li {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -234,31 +227,46 @@ nav ul.menu li a.aktif {
     font-size: 16px;
 }
   
-.iletisim-bilgileri i {
+.bilgi-kolon i {
     color: #6c63ff;
     font-size: 18px;
     min-width: 20px;
 }
-
+  
+.bilgi-kolon a {
+    color: #6c63ff;
+    text-decoration: none;
+    word-break: break-word;
+}
+  
+.bilgi-kolon a:hover {
+    text-decoration: underline;
+}
+  
+  /* Harita sütunu */
+.harita-kolon {
+    flex: 1 1 350px;
+    min-height: 300px;
+    height: auto;
+    border-radius: 8px;
+    overflow: hidden;
+}
+  
+  /* Responsive */
 @media (max-width: 768px) {
-    .iletisim-bilgileri {
-      padding: 20px 15px;
+    .iletisim-bilgileri-kapsayici {
+      flex-direction: column;
+      padding: 20px;
     }
   
-    .iletisim-bilgileri ul li {
-        font-size: 15px;
-      }
-  
-    .iletisim-bilgileri i {
-      margin-bottom: 5px;
-      font-size: 18px;
+    .harita-kolon {
+      height: 250px;
     }
   
-    .iletisim-bilgileri a {
-        word-break: break-word;
-      }
-  }
-  
+    .bilgi-kolon li {
+      font-size: 15px;
+    }
+}
   
 
 /* ----------------------------- İletişim Form alanları ------------------------------- */
