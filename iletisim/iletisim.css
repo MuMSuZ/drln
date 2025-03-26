@@ -16,7 +16,7 @@ header{
 }
 
 .container-header{
-    background: url(resim/background.jpg) no-repeat;
+    background: url(resim/background-iletisim.jpg) no-repeat;
     background-size: cover;
     background-position: right top;
     border-radius: 10px;
@@ -32,6 +32,10 @@ header{
     font-size: 50px;
     margin-bottom: 10px;
     color: #fff;
+}
+
+.container-header p{
+    height: 400px;
 }
 
 .name{
@@ -57,11 +61,11 @@ header{
     color: white;
     font-weight: 500;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
 }
   
 .insta-buton:hover {
-    transform: scale(1.05);
+    transform: scale(1.25);
 }
   
 .insta-buton a {
@@ -80,14 +84,17 @@ header{
     .container-header {
       flex-direction: column;
       align-items: flex-start;
-      padding: 20px;
+      padding: 30px 20px;
       height: auto;
       text-align: left;
+      background-position: center top;
+      position: relative; /* Instagram butonun container içinde kalmasını sağlar */
     }
   
     .container-header h1,
     .name {
       font-size: 32px;
+      width: 100%;
     }
   
     .work {
@@ -95,20 +102,20 @@ header{
     }
   
     .insta-buton {
-      position: relative;
-      width: 20px;
-      margin-top: 20px;
-      bottom: unset;
-      right: unset;
-      align-self: flex-start;
-      font-size: 16px;
-      padding: 6px 10px;
+      position: absolute;
+      top: 440px;
+      bottom: auto;
+      right: 20px;
+      font-size: 32px;
+      padding: 6px 12px;
+      border-radius: 18px;
     }
   
     .insta-buton a i {
-      font-size: 20px;
+      font-size: 32px;
     }
-}
+  }
+  
   
 
 /* ---------------------------------- Navbar ----------------------------- */
