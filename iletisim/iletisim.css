@@ -126,7 +126,7 @@ nav {
     right: 30px;
     width: 45%;
     background: transparent; /* Transparan arka plan */
-    backdrop-filter: blur(10px); /* Blur efekti */
+    backdrop-filter: blur(40px); /* Blur efekti */
     padding: 15px;
     display: flex;
     justify-content: center;
@@ -198,12 +198,13 @@ nav ul li a.active::after {
 
 /* Aktif menü stili */
 nav ul.menu li a.aktif {
-    border-bottom: 2px solid #fff;
+    color: #0daaba;
     font-weight: bold;
   }
 
 /* Mobil uyumlu tasarım */
 @media (max-width: 768px) {
+    
     /* Navbar */
 
     .menu-toggle {
@@ -212,6 +213,7 @@ nav ul.menu li a.aktif {
         top: 5px;
         right: 10px;
         border: none;
+        background: transparent;
         font-size: 30px;
         z-index: 101;
         color: #000;
@@ -252,7 +254,7 @@ nav ul.menu li a.aktif {
 
     /* Aktif menü stili */
     nav ul.menu li a.aktif {
-    border-bottom: 2px solid #fff;
+    color: #0daaba;
     font-weight: bold;
   }
 }
@@ -264,7 +266,7 @@ nav ul.menu li a.aktif {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 30px;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 40px auto;
     padding: 30px;
     background-color: #fff;
@@ -277,7 +279,7 @@ nav ul.menu li a.aktif {
 }
   
 .bilgi-kolon h2 {
-    font-size: 24px;
+    font-size: 32px;
     margin-bottom: 20px;
     border-bottom: 2px solid #6c63ff;
     display: inline-block;
@@ -293,19 +295,19 @@ nav ul.menu li a.aktif {
 .bilgi-kolon li {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
-    font-size: 16px;
+    gap: 15px;
+    margin-bottom: 25px;
+    font-size: 22px;
 }
   
 .bilgi-kolon i {
     color: #6c63ff;
-    font-size: 18px;
+    font-size: 26px;
     min-width: 20px;
 }
   
 .bilgi-kolon a {
-    color: #6c63ff;
+    color: #0daaba;
     text-decoration: none;
     word-break: break-word;
 }
@@ -316,7 +318,7 @@ nav ul.menu li a.aktif {
   
   /* Harita sütunu */
 .harita-kolon {
-    flex: 1 1 350px;
+    flex: 1 1 300px;
     min-height: 300px;
     height: auto;
     border-radius: 8px;
@@ -342,99 +344,77 @@ nav ul.menu li a.aktif {
 
 /* ----------------------------- İletişim Form alanları ------------------------------- */
 
+.iletisim-formu {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+  
+.iletisim-formu h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #444;
+    border-bottom: 2px solid #6c63ff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+  
 .iletisim-formu form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-  }
+    gap: 20px;
+}
   
-  .iletisim-formu label {
-    font-weight: 500;
-  }
-  
-  .iletisim-formu input,
-  .iletisim-formu textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-    resize: vertical;
-  }
-  
-  .iletisim-formu button {
-    background-color: #6c63ff;
-    color: white;
+.iletisim-formu input,
+.iletisim-formu textarea {
+    width: 100%;
     padding: 12px;
     font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: vertical;
+}
+  
+.iletisim-formu button {
+    width: fit-content;
+    background-color: #6c63ff;
+    color: white;
+    padding: 12px 24px;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
+    font-size: 16px;
     cursor: pointer;
-    transition: background 0.3s ease;
-  }
+    transition: background-color 0.3s ease;
+}
   
-  .iletisim-formu button:hover {
+.iletisim-formu button:hover {
     background-color: #574fd6;
-  }
+}
 
-  /* Harita */
-.harita-kapsayici iframe {
-    width: 100%;
-    height: 300px;
-    border: none;
-  }
-
-
-  /* Responsive tasarım */
+    /* Responsive */
 @media (max-width: 768px) {
-    
-    /* Navbar */
-    .menu-toggle {
-        display: block;
-        position: absolute;
-        top: 5px;
-        right: 10px;
-        border: none;
-        font-size: 30px;
-        z-index: 101;
-        color: #000;
-        cursor: pointer;
+    .iletisim-formu {
+        padding: 20px;
     }
-
-    nav {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        width: 50%;
-        padding: 0px;
+      
+    .iletisim-formu h2 {
+        font-size: 20px;
     }
-
-    nav ul.menu {
-        flex-direction: column;
-        display: none; /* Başlangıçta gizli */
-        background: rgba(0, 0, 0, 0.8);
-        padding: 25px;
-        align-items: center;
-        border-radius: 10px;
-        position: absolute;
-        top: 50px;
-        right: 10px;
-        width: 80%;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    nav ul.menu.show {
-        display: flex;
-    }
-
-    nav ul li a {
-        font-size: 18px;
-        padding: 10px;
-        color: white;
-    }
-  
-    /* İletişim Formu */
+      
     .iletisim-formu input,
     .iletisim-formu textarea {
-      font-size: 16px;
+        font-size: 16px;
+        padding: 10px;
     }
-  }
+      
+    .iletisim-formu button {
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+      
