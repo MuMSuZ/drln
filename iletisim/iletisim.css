@@ -239,6 +239,26 @@ nav ul.menu li a.aktif {
     font-size: 18px;
     min-width: 20px;
 }
+
+@media (max-width: 768px) {
+    .iletisim-bilgileri {
+      padding: 20px 15px;
+    }
+  
+    .iletisim-bilgileri ul li {
+        font-size: 15px;
+      }
+  
+    .iletisim-bilgileri i {
+      margin-bottom: 5px;
+      font-size: 18px;
+    }
+  
+    .iletisim-bilgileri a {
+        word-break: break-word;
+      }
+  }
+  
   
 
 /* ----------------------------- İletişim Form alanları ------------------------------- */
