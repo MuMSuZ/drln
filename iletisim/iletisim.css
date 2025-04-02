@@ -342,7 +342,7 @@ nav ul.menu li a.aktif {
 }
   
 
-/* ----------------------------- İletişim Form alanları ------------------------------- */
+/* ----------------------------- İletişim Form alanları ------------------------------- 
 
 .iletisim-formu {
     max-width: 1200px;
@@ -394,7 +394,7 @@ nav ul.menu li a.aktif {
     background-color: #574fd6;
 }
 
-    /* Responsive */
+
 @media (max-width: 768px) {
     .iletisim-formu {
         padding: 20px;
@@ -416,5 +416,89 @@ nav ul.menu li a.aktif {
         font-size: 16px;
         padding: 12px;
     }
-}
+} */
       
+.iletisim-kapsayici {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  }
+  
+  .form-kolon {
+    flex: 1;
+    padding: 40px;
+    background-color: #fff;
+  }
+  
+  .form-kolon h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #444;
+  }
+  
+  .form-kolon form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-kolon input,
+  .form-kolon textarea {
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .form-kolon button {
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .form-kolon button:hover {
+    background-color: #574fd6;
+  }
+  
+  .gorsel-kolon {
+    flex: 1;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .gorsel-kolon img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    padding: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .iletisim-kapsayici {
+      flex-direction: column;
+    }
+  
+    .form-kolon, .gorsel-kolon {
+      flex: 1 1 100%;
+      padding: 20px;
+    }
+  
+    .gorsel-kolon img {
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
