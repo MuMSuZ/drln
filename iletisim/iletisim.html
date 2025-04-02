@@ -123,8 +123,8 @@
     </section>
 
                                 <!-- İletişim Formu -->
-
-    <section class="iletisim-formu">
+                                <!--Firebase database-->
+    <!--<section class="iletisim-formu">
         <h2>İletişim Formu</h2>
         <form id="iletisimForm">
           <label for="isim">Adınız Soyadınız</label>
@@ -138,7 +138,35 @@
       
           <button type="submit">Gönder</button>
         </form>
+      </section>-->
+
+                                <!-- Formsubmit.co -->
+
+      <section class="iletisim-formu">
+        <h2>İletişim Formu</h2>
+        <form action="https://formsubmit.co/lemannabiyeva1212@gmail.com" method="POST">
+          
+          <!-- Formsubmit gizli ayarlar -->
+          <input type="hidden" name="_subject" value="Yeni İletişim Formu Geldi!">
+          <input type="hidden" name="_autoresponse" value="Mesajınızı aldım. En kısa sürede size geri dönüş yapacağım.">
+          <input type="hidden" name="_template" value="box">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" style="display:none">
+
+          <!-- Görünür alanlar -->
+          <label for="isim">Adınız Soyadınız</label>
+          <input type="text" id="isim" name="isim" placeholder="Adınız Soyadınız" required>
+
+          <label for="email">E-posta Adresiniz</label>
+          <input type="email" id="email" name="email" placeholder="ornek@mail.com" required>
+
+          <label for="mesaj">Mesajınız</label>
+          <textarea id="mesaj" name="mesaj" rows="5" placeholder="Mesajınızı buraya yazın..." required></textarea>
+
+          <button type="submit">Gönder</button>
+        </form>
       </section>
+
                         
                           
       
