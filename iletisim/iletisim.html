@@ -139,38 +139,28 @@
           <button type="submit">Gönder</button>
         </form>
       </section>-->
-
-                                <!-- Formsubmit.co -->
-
-      <section class="iletisim-kapsayici">
-        <div class="form-kolon">
-          <h2>İletişim Formu</h2>
-          <form action="https://formsubmit.co/lemannabiyeva1212@gmail.com" method="POST">
-            <!-- Formsubmit gizli ayarlar -->
-            <input type="hidden" name="_subject" value="Yeni İletişim Formu Geldi!">
-            <input type="hidden" name="_autoresponse" value="Mesajınızı aldım. En kısa sürede size geri dönüş yapacağım.">
-            <input type="hidden" name="_template" value="box">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="text" name="_honey" style="display:none">
-            <!-- Görünür alanlar -->
-            <label for="isim">Adınız Soyadınız</label>
-            <input type="text" id="isim" name="isim" placeholder="Adınız Soyadınız" required>
       
-            <label for="email">E-posta Adresiniz</label>
-            <input type="email" id="email" name="email" placeholder="ornek@mail.com" required>
+      <!-- Formsubmit.co -->
       
-            <label for="mesaj">Mesajınız</label>
-            <textarea id="mesaj" name="mesaj" rows="5" placeholder="Mesajınızı buraya yazın..." required></textarea>
+      <form id="iletisimForm">
+        <!-- gizli alanlar -->
+        <input type="hidden" name="_subject" value="Yeni İletişim Formu">
+        <input type="hidden" name="_autoresponse" value="Mesajınızı aldım, teşekkür ederim.">
+        <input type="hidden" name="_captcha" value="false">
       
-            <button type="submit">Gönder</button>
-          </form>
-        </div>
+        <!-- görünür alanlar -->
+        <input type="text" name="isim" required>
+        <input type="email" name="email" required>
+        <textarea name="mesaj" required></textarea>
       
-        <div class="gorsel-kolon">
-          <img src="resim/iletisim.gif" alt="İletişim Görseli">
-        </div>
-      </section>             
-
+        <button type="submit">Gönder</button>
+      </form>
+      
+      <!-- Başarılı mesaj alanı -->
+      <div id="tesekkurMesaji" style="display:none; margin-top: 20px; color: green;">
+        Mesajınız başarıyla gönderildi. Teşekkür ederiz!
+      </div>
+      
 
       <!------------------------------ Footer ------------------------------------->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
