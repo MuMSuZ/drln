@@ -104,7 +104,7 @@ header{
     transform: translateX(-5%);
 }
 
-.date-btn.active::after 
+.date-btn.active::after {
     content: "";
     position: absolute;
     bottom: -10px; /* Butonun biraz aşağısına yerleştir */

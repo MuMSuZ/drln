@@ -84,7 +84,26 @@
                             </div>
                           </section>             
                     
+  <!-- Yorumlar --> 
+
+    <!-- Firebase SDK'ları -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore-compat.js"></script>
   
+  
+    <section class="yorumlar-container">
+      <h2>Hastalarımız Ne Diyor?</h2>
+  
+      <!-- Form -->
+      <form id="yorumForm">
+        <input type="text" id="isim" placeholder="Adınız (isteğe bağlı)">
+        <textarea id="yorum" placeholder="Yorumunuzu yazın..." required></textarea>
+        <button type="submit">Gönder</button>
+      </form>
+  
+      <!-- Yorumlar -->
+      <div class="yorumlar-slider" id="yorumListesi"></div>
+    </section>
 
   <!------------------------------ Footer ------------------------------------->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">

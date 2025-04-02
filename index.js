@@ -49,3 +49,28 @@ db.collection("yorumlar")
       yorumListesi.appendChild(div);
     });
   });
+
+  
+// Swiper.js ile uzmanlık alanları için slider oluşturma
+
+    const swiper = new Swiper(".uzmanlikSwiper", {
+      slidesPerView: 4,
+      spaceBetween: 24,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+      breakpoints: {
+        0: { slidesPerView: 1 },
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+        1280: { slidesPerView: 4 }
+      }
+    });
+  
+
