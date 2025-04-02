@@ -342,121 +342,47 @@ nav ul.menu li a.aktif {
 }
   
 
-/* ----------------------------- İletişim Form alanları ------------------------------- 
-
-.iletisim-formu {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-  
-.iletisim-formu h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #444;
-    border-bottom: 2px solid #6c63ff;
-    display: inline-block;
-    padding-bottom: 5px;
-}
-  
-.iletisim-formu form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-  
-.iletisim-formu input,
-.iletisim-formu textarea {
-    width: 100%;
-    padding: 12px;
-    font-size: 15px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    resize: vertical;
-}
-  
-.iletisim-formu button {
-    width: fit-content;
-    background-color: #6c63ff;
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-  
-.iletisim-formu button:hover {
-    background-color: #574fd6;
-}
-
-
-@media (max-width: 768px) {
-    .iletisim-formu {
-        padding: 20px;
-    }
-      
-    .iletisim-formu h2 {
-        font-size: 20px;
-    }
-      
-    .iletisim-formu input,
-    .iletisim-formu textarea {
-        font-size: 16px;
-        padding: 10px;
-    }
-      
-    .iletisim-formu button {
-        width: 100%;
-        text-align: center;
-        font-size: 16px;
-        padding: 12px;
-    }
-} */
+/* ----------------------------- İletişim Form alanları ------------------------------- */
       
 .iletisim-kapsayici {
     display: flex;
     flex-wrap: wrap;
     gap: 0;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 50px auto;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  }
+}
   
-  .form-kolon {
+.form-kolon {
     flex: 1;
     padding: 40px;
     background-color: #fff;
-  }
+}
   
-  .form-kolon h2 {
+.form-kolon h2 {
     margin-bottom: 20px;
     font-size: 24px;
     color: #444;
-  }
+}
   
-  .form-kolon form {
+.form-kolon form {
     display: flex;
     flex-direction: column;
     gap: 15px;
-  }
+}
   
-  .form-kolon input,
-  .form-kolon textarea {
+.form-kolon input,
+.form-kolon textarea {
     padding: 12px;
     font-size: 15px;
     border: 1px solid #ccc;
     border-radius: 6px;
-  }
+}
   
-  .form-kolon button {
+.form-kolon button {
     background-color: #6c63ff;
     color: white;
     border: none;
@@ -465,28 +391,28 @@ nav ul.menu li a.aktif {
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
+}
   
-  .form-kolon button:hover {
+.form-kolon button:hover {
     background-color: #574fd6;
-  }
+}
   
-  .gorsel-kolon {
+.gorsel-kolon {
     flex: 1;
-    background-color: #f5f5f5;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
   
-  .gorsel-kolon img {
+.gorsel-kolon img {
     max-width: 100%;
     height: auto;
     object-fit: cover;
     padding: 20px;
-  }
+}
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     .iletisim-kapsayici {
       flex-direction: column;
     }
@@ -497,8 +423,7 @@ nav ul.menu li a.aktif {
     }
   
     .gorsel-kolon img {
-      width: 100%;
-      padding: 0;
+      display: none; 
     }
-  }
+}
   
