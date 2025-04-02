@@ -4,26 +4,22 @@
     const menu = document.querySelector('nav ul.menu');
     menu.classList.toggle('show');
 }
+  
+  
+// Firebase Firestore bağlantısı
 
-  // Form gönderildiğinde alert mesajı gösterme
-
+document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("iletisimForm").addEventListener("submit", function (e) {
     e.preventDefault();
-    alert("Mesajınız başarıyla gönderildi. En kısa sürede sizinle iletişime geçilecektir.");
-    this.reset();
-  });
-  
-  // Form verilerini Firease'ye kaydetme
 
-  document.getElementById("iletisimForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-  
-    // Form verilerini al
     const isim = document.getElementById("isim").value;
     const email = document.getElementById("email").value;
     const mesaj = document.getElementById("mesaj").value;
-  
-    // Firestore'a kaydet
+
+    console.log("isim:", isim);
+    console.log("email:", email);
+    console.log("mesaj:", mesaj);
+
     db.collection("iletisim_mesajlari").add({
       isim: isim,
       email: email,
@@ -39,5 +35,6 @@
       alert("Gönderim sırasında bir hata oluştu. Lütfen tekrar deneyin.");
     });
   });
-  
+});
+
   
