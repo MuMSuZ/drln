@@ -39,31 +39,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // Form submit işlemi için FormSubmit kullanımı
-  document.getElementById("iletisimForm").addEventListener("submit", function(e) {
-    e.preventDefault(); // Sayfanın yönlenmesini engelle
 
-    const form = e.target;
-    const data = new FormData(form);
+document.getElementById("iletisimForm").addEventListener("submit", function(e) {
+  e.preventDefault();
 
-    fetch("https://formsubmit.co/lemannabiyeva1212@gmail.com", {
-      method: "POST",
-      body: data,
-      headers: {
-        'Accept': 'application/json'
-      }
-    })
-    .then(response => {
-      if (response.ok) {
-        form.reset(); // Formu temizle
-        document.getElementById("tesekkurMesaji").style.display = "block"; // Mesajı göster
-      } else {
-        alert("Gönderim sırasında bir hata oluştu.");
-      }
-    })
-    .catch(error => {
-      alert("Sunucuya ulaşılamadı.");
-      console.error(error);
-    });
+  const form = e.target;
+  const data = new FormData(form);
+
+  fetch("https://formsubmit.co/lemannabiyeva1212@gmail.com", {
+    method: "POST",
+    body: data,
+    headers: {
+      'Accept': 'application/json'
+    }
+  })
+  .then(response => {
+    if (response.ok) {
+      form.reset();
+      document.getElementById("tesekkurMesaji").style.display = "block";
+    } else {
+      alert("Gönderim sırasında bir hata oluştu.");
+    }
+  })
+  .catch(error => {
+    console.error("Sunucu hatası:", error);
+    alert("Sunucuya ulaşılamadı.");
   });
+});
+
 
   
