@@ -185,13 +185,13 @@ nav ul.menu li a.aktif {
     .container-header {
       background: url(background66.jpg) no-repeat;
       background-size: cover;
-      background-position: right top;
+      background-position: center top;
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
       text-align: left;
       padding: 10px;
-      height: 300px;
+      height: 500px;
     }
   
     .container-header h1 {
