@@ -16,7 +16,7 @@ nav {
     right: 30px;
     width: 45%;
     background: transparent; /* Transparan arka plan */
-    backdrop-filter: blur(10px); /* Blur efekti */
+    backdrop-filter: blur(50px); /* Blur efekti */
     padding: 15px;
     display: flex;
     justify-content: center;
@@ -86,6 +86,12 @@ nav ul li a.active::after {
     display: none;
 }
 
+/* Aktif menü stili */
+nav ul.menu li a.aktif {
+    color: #0B5369;
+    font-weight: bold;
+  }
+
 /* Mobil uyumlu tasarım */
 @media (max-width: 768px) {
     /* Navbar */
@@ -96,6 +102,7 @@ nav ul li a.active::after {
         top: 5px;
         right: 10px;
         border: none;
+        background: transparent;
         font-size: 30px;
         z-index: 101;
         color: #000;
@@ -133,22 +140,28 @@ nav ul li a.active::after {
         padding: 10px;
         color: white;
     }
+
+    /* Aktif menü stili */
+    nav ul.menu li a.aktif {
+        color: #0daaba;
+        font-weight: bold;
+      }
 }
 
 /* ------------------------------- Header --------------------------------------- */
 
 .container-header {
-    height: 100vh; /* Yüksekliği tam ekran yap */
     background: url(background66.jpg) no-repeat;
     background-size: cover;
     background-position: right top;
     border-radius: 10px; /* Köşeleri yuvarla */
-    padding: 50px;
+    height: 100vh; /* Yüksekliği tam ekran yap */
     display: flex;
     align-items: top;
-    justify-content: left;
+    justify-content: flex-start;
     color: white;
     text-align: left;
+    padding: 50px;
 }
 
 .container-header h1 {
@@ -158,61 +171,6 @@ nav ul li a.active::after {
 .container-header p {
     font-size: 25px;
 }
-
-.randevu {
-    display: inline-block;
-    position: absolute;
-    right: 50px;
-    top: 215px;
-
-}
-
-/* ------------------------------- Mobil Uyum ---------------------------------- */
-
-@media (max-width: 768px) {
-    .container-header {
-      height: auto;
-      padding: 30px 20px;
-      background-position: center top;
-      align-items: flex-start;
-      flex-direction: column;
-      text-align: left;
-    }
-  
-    .container-header h1 {
-      font-size: 32px;
-      width: 100%;
-    }
-  
-    .container-header p {
-      font-size: 18px;
-      width: 100%;
-    }
-  
-    .btn {
-      font-size: 18px;
-      padding: 12px 24px;
-      margin-top: 40px;
-    }
-  
-    .btn-randevu {
-      position: static;
-      margin-top: 30px;
-      font-size: 18px;
-      padding: 12px 24px;
-      width: fit-content;
-    }
-  
-    .randevu {
-      position: static;
-      width: 100%;
-      text-align: left;
-      margin-top: 20px;
-    }
-  }
-
-/* ------------------------------- Butonlar ------------------------------------- */
-
 
 /* Randevu Butonu */
 .btn-randevu {
@@ -233,7 +191,7 @@ nav ul li a.active::after {
 }
 
 /* Yakından tanı butonu*/
-.btn {
+.btn-tani {
     display: inline-block;
     background: #0D98BA;
     color: white;
@@ -244,10 +202,54 @@ nav ul li a.active::after {
     margin-top: 80px;
 }
 
-.btn:hover {
+.btn-tani:hover {
     background: #0daaba;
 }
 
+@media (max-width: 768px) {
+
+    .container-header {
+      background: url(background-mobil.jpg) no-repeat;
+      background-size: cover;
+      background-position: center top;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      text-align: left;
+      padding: 10px;
+      height: 500px;
+    }
+  
+    .container-header h1 {
+      margin-top: 80px;
+      font-size: 32px;
+      width: 60%;
+    }
+  
+    .container-header p {
+      font-size: 20px;
+      width: 60%;
+    }
+
+    .work {
+      display: none;
+    }
+  
+    .btn-tani {
+      font-size: 18px;
+      padding: 12px 24px;
+      margin-top: 180px;
+    }
+  
+    .btn-randevu {
+      position: static;
+      margin-top: 30px;
+      margin-left: 20px;
+      font-size: 18px;
+      padding: 12px 24px;
+      width: fit-content;
+    }
+}
 
 /* --------------------------------- Uzmanlık Alanı ----------------------------------*/
 
@@ -268,8 +270,6 @@ nav ul li a.active::after {
     margin-bottom: 20px;
     font-size: 30px;
 }
-
-
 
 .uzmanlik {
     display: flex;
@@ -295,7 +295,7 @@ nav ul li a.active::after {
 }
 
   /* Kart Tasarımı */
-  .uzmanlik-kart {
+.uzmanlik-kart {
     background-color: #fbe7f0;
     border-radius: 20px;
     overflow: hidden;
@@ -305,20 +305,20 @@ nav ul li a.active::after {
     transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
-  }
+}
   
-  .uzmanlik-kart:hover {
+.uzmanlik-kart:hover {
     transform: translateY(-8px);
-  }
+}
   
-  .kart-resim {
+.kart-resim {
     height: 220px;
     background-size: cover;
     background-position: center;
     position: relative;
-  }
+}
   
-  .kart-baslik {
+.kart-baslik {
     position: absolute;
     bottom: 0;
     background-color: rgba(255, 255, 255, 0.85);
@@ -329,29 +329,29 @@ nav ul li a.active::after {
     font-weight: bold;
     text-align: center;
     color: #6b0d57;
-  }
+}
   
-  .kart-icerik {
+.kart-icerik {
     padding: 16px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  }
+}
   
-  .kart-icerik h2 {
+.kart-icerik h2 {
     font-size: 1.1rem;
     margin-bottom: 10px;
     color: #6b0d57;
-  }
+}
   
-  .kart-icerik p {
+.kart-icerik p {
     font-size: 0.95rem;
     margin-bottom: 16px;
     color: #333;
-  }
+}
   
-  .btn-detay {
+.btn-detay {
     align-self: flex-start;
     background: none;
     border: none;
@@ -361,9 +361,9 @@ nav ul li a.active::after {
     position: relative;
     padding-left: 24px;
     font-size: 0.95rem;
-  }
+}
   
-  .btn-detay .circle {
+.btn-detay .circle {
     width: 18px;
     height: 18px;
     border-radius: 50%;
@@ -372,9 +372,9 @@ nav ul li a.active::after {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-  }
+}
   
-  .btn-detay .arrow {
+.btn-detay .arrow {
     position: absolute;
     top: 50%;
     left: 5px;
@@ -383,91 +383,66 @@ nav ul li a.active::after {
     border-right: 2px solid #6b0d57;
     border-bottom: 2px solid #6b0d57;
     transform: translateY(-50%) rotate(-45deg);
-  }
+}
   
-  .button-detay-text {
+.button-detay-text {
     padding-left: 6px;
-  }
+}
 
-  /* 🔧 MOBİL UYUMLULUK */
+.btn-uzmanlik {
+    position: relative;
+    background: none;
+    border: none;
+    color: #6b0d57;
+    font-weight: 600;
+    cursor: pointer;
+    padding-left: 24px;
+    font-size: 1.2rem;
+    margin-right: 20px;
+}
+  
+.btn-uzmanlik .arrow {
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #6b0d57;
+    border-bottom: 2px solid #6b0d57;
+    transform: translateY(-70%) rotate(45deg);
+}
+
+.btn-uzmanlik .arrow1 {
+    position: absolute;
+    top: 50%;
+    right: 65px;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #6b0d57;
+    border-bottom: 2px solid #6b0d57;
+    transform: translateY(-70%) rotate(45deg);
+}
+  
+ /* 🔧 MOBİL UYUMLULUK */
 @media (max-width: 768px) {
+    
     .kart-wrapper {
-      animation: none;
-      flex-wrap: wrap;
-      width: 70%;
-      justify-content: center;
-    }
-  
-    .uzmanlik-kart {
-      width: 90%;
-      margin: 10px auto;
-    }
-  
-    .uzmanlik {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-  
- /* @media (max-width: 768px) {
-    .uzmanlik-kart {
-      max-width: 90%;
-    }
-
-     Otomatik kaydırma kaldırılıyor 
-    .kart-wrapper {
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
+        overflow: auto; /* Taşmaları önlemek için */
+        scroll-snap-type: x mandatory; /* Kaydırma için snap efekti */
+        -webkit-overflow-scrolling: touch; /* iOS için kaydırma efekti */
         display: flex;
         scroll-behavior: smooth;
     }
-
+  
     .kart-wrapper::-webkit-scrollbar {
-        display: none;
+        display: none; /* Kaydırma çubuğunu gizle */
     }
-    
-    .uzmanlık {
+
+    .uzmanlik {
         flex-wrap: wrap;
         justify-content: center;
     }
-  } */
-  
-  
-/* -------------------------------- Modal --------------------------------- */
-
-.modal {
-    display: none; /* Başlangıçta gizli */
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Arka planı koyulaştır */
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
-
-.modal-content {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-.close {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-
 
 
 /* ----------------------------- Footer alanı ------------------------------- */
@@ -496,5 +471,3 @@ footer p {
     color: #333;
     margin: 20px 0;
 }
-  
-    
