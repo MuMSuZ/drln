@@ -198,7 +198,7 @@ nav ul li a.active::after {
 
 /* Aktif menü stili */
 nav ul.menu li a.aktif {
-    color: #0daaba;
+    color: #0B5369;
     font-weight: bold;
   }
 
