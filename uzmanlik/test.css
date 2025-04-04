@@ -183,7 +183,192 @@ nav ul.menu li a.aktif {
     }
 }
 
-/* ------------------------------- Uzmanlık Alanları kısmı ----------------------------------- */
+/* -------------------------- Genel Sayfa Ayarları ------------------------------ */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e6ebfa;
+    box-sizing: border-box;
+}
+
+/* ------------------------------- Navbar --------------------------------------- */
+
+nav {
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    width: 45%;
+    background: transparent; /* Transparan arka plan */
+    backdrop-filter: blur(50px); /* Blur efekti */
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    z-index: 100;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+}
+
+/* Menü listesi */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+/* Linkler */
+nav ul li a {
+    color: black;
+    text-shadow: #333;
+    font-size: 25px;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Efekti: Yazı büyüme ve alt çizgi animasyonu */
+nav ul li a:hover {
+    transform: scale(1.1); /* Yazıyı büyüt */
+    color: #0D98BA; /* Hafif renk değişimi */
+}
+
+/* Alt çizgi animasyonu */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0%; /* Başlangıçta görünmez */
+    height: 3px;
+    background: #0daaba; /* Çizgi rengi */
+    transition: width 0.3s ease-out, left 0.3s ease-out;
+}
+
+/* Hover olunca çizgi ortadan yanlara genişlesin */
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Aktif link */
+nav ul li a.active::after {
+    width: 100%;
+    left: 0;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Aktif menü stili */
+nav ul.menu li a.aktif {
+    color: #0B5369;
+    font-weight: bold;
+  }
+
+/* Mobil uyumlu tasarım */
+@media (max-width: 768px) {
+    /* Navbar */
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        border: none;
+        background: transparent;
+        font-size: 30px;
+        z-index: 101;
+        color: #000;
+        cursor: pointer;
+    }
+
+    nav {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 50%;
+        padding: 0px;
+    }
+
+    nav ul.menu {
+        flex-direction: column;
+        display: none; /* Başlangıçta gizli */
+        background: rgba(0, 0, 0, 0.8);
+        padding: 25px;
+        align-items: center;
+        border-radius: 10px;
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        width: 80%;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul.menu.show {
+        display: flex;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+        padding: 10px;
+        color: white;
+    }
+
+    /* Aktif menü stili */
+    nav ul.menu li a.aktif {
+        color: #0daaba;
+        font-weight: bold;
+      }
+}
+
+/* ------------------------------- Header -------------------------------------- */
+
+.container-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 150px;
+}
+
+.container-header h1 {
+    font-size: 50px;
+    color: #0daaba;
+    text-align: left;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+
+    .container-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      text-align: left;
+      padding: 10px;
+      height: 150px;
+    }
+  
+    .container-header h1 {
+      margin-top: 20px;
+      font-size: 32px;
+      width: 60%;
+    }
+}
+
+/* ------------------------ Uzmanlık Alanları kısmı ------------------------ */
 
 /* Kartlar */
 
@@ -193,60 +378,62 @@ nav ul.menu li a.aktif {
     gap: 20px;
     max-width: 1200px;
     margin: auto;
+    padding: 20px;
 }
 
 .uzmanlik-kart {
-    background-color: linear-gradient(135deg, #fff, #FFB6C1);
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: linear-gradient(135deg, #fff, #FFB6C1);
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     text-align: left;
-    z-index: 0;
+    position: relative;
 }
 
+/* Görsel */
 .kart-resim {
-    position: relative;
-    z-index: 1;
-    width: 400px;
+    width: 100%;
     height: 400px;
     background-size: cover;
     background-position: center;
     transition: transform 0.3s ease;
+    flex-shrink: 0;
 }
 
+/* Başlık */
 .kart-baslik {
-    position: absolute;
-    bottom: 0;
-    padding: 30px;
-    font-size: 30px;
+    background: rgba(255,255,255,0.8);
+    padding: 20px;
+    font-size: 26px;
     font-weight: bold;
     color: black;
     text-align: left;
-    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
     width: 100%;
-    transition: 0.3s;
 }
 
+/* Hover'da başlık gizleniyor */
 .uzmanlik-kart:hover .kart-baslik {
     display: none;
 }
 
+/* İçerik */
 .kart-icerik {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    transform: translateY(100%);
     position: absolute;
     bottom: 0;
-    right: 0;
     left: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
-    text-align: left;
-    pointer-events: auto;
+    right: 0;
     z-index: 2;
 }
 
+/* Hover ile açılma */
 .uzmanlik-kart:hover .kart-icerik {
     transform: translateY(0);
 }
@@ -257,59 +444,56 @@ nav ul.menu li a.aktif {
     margin: 10px 0;
 }
 
-/* From Uiverse.io by cssbuttons-io */ 
+/* ------------------------ Buton ------------------------ */
+
 button {
     position: relative;
     display: inline-block;
     cursor: pointer;
     outline: none;
     border: 0;
-    vertical-align: middle;
-    text-decoration: none;
     background: transparent;
     padding: 0;
     font-size: inherit;
     font-family: inherit;
 }
-   
+
 button.btn-detay {
     width: 12rem;
     height: auto;
     position: relative;
     z-index: 3;
+    margin-top: 10px;
 }
-   
+
 button.btn-detay .circle {
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     position: relative;
     display: block;
-    margin: 0;
     width: 3rem;
     height: 3rem;
     background: #282936;
     border-radius: 1.625rem;
 }
-   
+
 button.btn-detay .circle .icon {
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     position: absolute;
     top: 0;
     bottom: 0;
     margin: auto;
     background: #fff;
 }
-   
+
 button.btn-detay .circle .icon.arrow {
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     left: 0.625rem;
     width: 1.125rem;
     height: 0.125rem;
     background: none;
 }
-   
+
 button.btn-detay .circle .icon.arrow::before {
-    position: absolute;
     content: "";
+    position: absolute;
     top: -0.29rem;
     right: 0.0625rem;
     width: 0.625rem;
@@ -318,64 +502,141 @@ button.btn-detay .circle .icon.arrow::before {
     border-right: 0.125rem solid #fff;
     transform: rotate(45deg);
 }
-   
+
 button.btn-detay .button-detay-text {
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     padding: 0.75rem 0;
-    margin: 0 0 0 1.85rem;
+    margin-left: 1.85rem;
     color: #282936;
     font-weight: 700;
-    line-height: 1.6;
     text-align: center;
     text-transform: uppercase;
-   }
-   
+    line-height: 1.6;
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
 button:hover .circle {
     width: 100%;
-   }
-   
+}
+
 button:hover .circle .icon.arrow {
     background: #fff;
     transform: translate(1rem, 0);
-   }
-   
+}
+
 button:hover .button-detay-text {
     color: #fff;
     text-decoration: none;
-   }
+}
 
-@media (max-width: 768px) {
-    
-    /* Uzmanlık kartları */
+/* ------------------------ Responsive ------------------------ */
 
+/* 1. Küçük telefonlar */
+@media (max-width: 480px) {
     .container-uzmanlik {
         grid-template-columns: 1fr;
-        width: 98%;
+        width: 100%;
+        padding: 10px;
     }
 
     .kart-resim {
+        height: 220px;
+    }
+
+    .kart-baslik {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .kart-icerik p {
+        font-size: 16px;
+    }
+
+    button.btn-detay {
         width: 100%;
+    }
+}
+
+/* 2. Orta boy telefonlar */
+@media (min-width: 481px) and (max-width: 767px) {
+    .container-uzmanlik {
+        grid-template-columns: 1fr;
+        width: 95%;
+    }
+
+    .kart-resim {
         height: 250px;
+    }
+
+    .kart-baslik {
+        font-size: 22px;
     }
 
     .kart-icerik p {
         font-size: 18px;
     }
+
+    button.btn-detay {
+        width: 90%;
+    }
 }
 
-/* Küçük telefonlar */
-@media (max-width: 480px) {}
+/* 3. Tabletler */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container-uzmanlik {
+        grid-template-columns: repeat(2, 1fr);
+        width: 95%;
+    }
 
-/* Orta boy telefonlar (iPhone 13 gibi) */
-@media (min-width: 481px) and (max-width: 767px) {}
+    .kart-resim {
+        height: 300px;
+    }
 
-/* Tabletler */
-@media (min-width: 768px) and (max-width: 1023px) {}
+    .kart-baslik {
+        font-size: 24px;
+    }
+
+    .kart-icerik p {
+        font-size: 20px;
+    }
+
+    button.btn-detay {
+        width: 80%;
+    }
+}
+
+
+
+/* ----------------------------- Footer alanı ------------------------------- */
+
+.social-icons {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #c13584; /* Instagram rengi gibi */
+}
+
+footer p {
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+    margin: 20px 0;
+}
 
 
 /* ----------------------------- Footer alanı ------------------------------- */
