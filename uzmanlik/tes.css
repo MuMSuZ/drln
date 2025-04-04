@@ -183,184 +183,178 @@ nav ul.menu li a.aktif {
     }
 }
 
+/* ------------------------------- Uzmanlık Alanları kısmı ----------------------------------- */
 
-/* --------------------------------- Uzmanlık Alanı ----------------------------------*/
+/* Kartlar */
 
 .container-uzmanlik {
-    background: linear-gradient(135deg, #fff, #FFB6C1);
-    text-align: center;
-    margin: 50px auto;
-    max-width: 1200px;
-    padding: 20px 0;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    position: relative;
-}
-
-.container-uzmanlik h2 {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 30px;
-}
-
-.uzmanlik {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Her satıra 3'e kadar kart */
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding: 0 20px;
-    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
 }
 
-/* Kart Tasarımı */
 .uzmanlik-kart {
-    background-color: #fbe7f0;
-    border-radius: 20px;
+    background-color: linear-gradient(135deg, #fff, #FFB6C1);
+    position: relative;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    display: flex;
-    flex-direction: column;
-}
-
-.uzmanlik-kart:hover {
-    transform: translateY(-8px);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
 }
 
 .kart-resim {
-    height: 220px;
+    width: 400px;
+    height: 400px;
     background-size: cover;
     background-position: center;
-    position: relative;
+    transition: transform 0.3s ease;
 }
 
 .kart-baslik {
     position: absolute;
     bottom: 0;
-    background-color: rgba(255, 255, 255, 0.85);
-    width: 100%;
-    padding: 12px;
-    margin: 0;
-    font-size: 1.1rem;
+    padding: 30px;
+    font-size: 30px;
     font-weight: bold;
-    text-align: center;
-    color: #6b0d57;
+    color: black;
+    text-align: left;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    transition: 0.3s;
+}
+
+.uzmanlik-kart:hover .kart-baslik {
+    display: none;
 }
 
 .kart-icerik {
-    padding: 16px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.kart-icerik h2 {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-    color: #6b0d57;
-}
-
-.kart-icerik p {
-    font-size: 0.95rem;
-    margin-bottom: 16px;
-    color: #333;
-}
-
-/* Buton */
-.btn-detay {
-    align-self: center;
-    background: none;
-    border: none;
-    color: #6b0d57;
-    font-weight: 600;
-    cursor: pointer;
-    position: relative;
-    padding-left: 24px;
-    font-size: 1.2rem;
-}
-
-.btn-detay .circle {
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    border: 2px solid #6b0d57;
     position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.uzmanlik-kart:hover .kart-icerik {
+    transform: translateY(0);
+}
+
+.uzmanlik-kart p {
+    font-size: 22px;
+    padding: 10px 0;
+    margin: 10px 0;
+}
+
+/* From Uiverse.io by cssbuttons-io */ 
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+   }
+   
+   button.btn-detay {
+    width: 12rem;
+    height: auto;
+   }
+   
+   button.btn-detay .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #282936;
+    border-radius: 1.625rem;
+   }
+   
+   button.btn-detay .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+   }
+   
+   button.btn-detay .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+   }
+   
+   button.btn-detay .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+   }
+   
+   button.btn-detay .button-detay-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
     left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-}
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #282936;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+   }
+   
+   button:hover .circle {
+    width: 100%;
+   }
+   
+   button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+   }
+   
+   button:hover .button-detay-text {
+    color: #fff;
+    text-decoration: none;
+   }
 
-.btn-detay .arrow {
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    width: 5px;
-    height: 5px;
-    border-right: 2px solid #6b0d57;
-    border-bottom: 2px solid #6b0d57;
-    transform: translateY(-50%) rotate(-45deg);
-}
-
-.button-detay-text {
-    padding-left: 6px;
-}
-
-/* Yön tuşları (isteğe bağlı) */
-.btn-uzmanlik {
-    position: relative;
-    background: none;
-    border: none;
-    color: #6b0d57;
-    font-weight: 600;
-    cursor: pointer;
-    padding-left: 24px;
-    font-size: 1.2rem;
-    margin-right: 20px;
-}
-
-.btn-uzmanlik .arrow {
-    position: absolute;
-    top: 50%;
-    right: -15px;
-    width: 10px;
-    height: 10px;
-    border-right: 2px solid #6b0d57;
-    border-bottom: 2px solid #6b0d57;
-    transform: translateY(-70%) rotate(45deg);
-}
-
-.btn-uzmanlik .arrow1 {
-    position: absolute;
-    top: 50%;
-    right: 65px;
-    width: 10px;
-    height: 10px;
-    border-right: 2px solid #6b0d57;
-    border-bottom: 2px solid #6b0d57;
-    transform: translateY(-70%) rotate(45deg);
-}
-
-/* 🔧 Mobil uyumluluk */
 @media (max-width: 768px) {
     .container-uzmanlik {
-        padding: 20px 10px;
-    }
-
-    .uzmanlik {
         grid-template-columns: 1fr;
+        width: 98%;
     }
 
-    .kart-icerik h2 {
-        font-size: 1rem;
+    .kart-resim {
+        width: 100%;
+        height: 250px;
     }
 
     .kart-icerik p {
-        font-size: 0.9rem;
+        font-size: 18px;
     }
 }
-
-
 
 
 /* ----------------------------- Footer alanı ------------------------------- */

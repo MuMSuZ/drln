@@ -1,0 +1,240 @@
+/* ------------------------ Uzmanlık Alanları kısmı ------------------------ */
+
+/* Kartlar */
+
+.container-uzmanlik {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.uzmanlik-kart {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: linear-gradient(135deg, #fff, #FFB6C1);
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    position: relative;
+}
+
+/* Görsel */
+.kart-resim {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+/* Başlık */
+.kart-baslik {
+    background: rgba(255,255,255,0.8);
+    padding: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    color: black;
+    text-align: left;
+    width: 100%;
+}
+
+/* Hover'da başlık gizleniyor */
+.uzmanlik-kart:hover .kart-baslik {
+    display: none;
+}
+
+/* İçerik */
+.kart-icerik {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    transform: translateY(100%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+/* Hover ile açılma */
+.uzmanlik-kart:hover .kart-icerik {
+    transform: translateY(0);
+}
+
+.uzmanlik-kart p {
+    font-size: 22px;
+    padding: 10px 0;
+    margin: 10px 0;
+}
+
+/* ------------------------ Buton ------------------------ */
+
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+button.btn-detay {
+    width: 12rem;
+    height: auto;
+    position: relative;
+    z-index: 3;
+    margin-top: 10px;
+}
+
+button.btn-detay .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    background: #282936;
+    border-radius: 1.625rem;
+}
+
+button.btn-detay .circle .icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+}
+
+button.btn-detay .circle .icon.arrow {
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+
+button.btn-detay .circle .icon.arrow::before {
+    content: "";
+    position: absolute;
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+}
+
+button.btn-detay .button-detay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin-left: 1.85rem;
+    color: #282936;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.6;
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
+button:hover .circle {
+    width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+}
+
+button:hover .button-detay-text {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ------------------------ Responsive ------------------------ */
+
+/* 1. Küçük telefonlar */
+@media (max-width: 480px) {
+    .container-uzmanlik {
+        grid-template-columns: 1fr;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .kart-resim {
+        height: 220px;
+    }
+
+    .kart-baslik {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .kart-icerik p {
+        font-size: 16px;
+    }
+
+    button.btn-detay {
+        width: 100%;
+    }
+}
+
+/* 2. Orta boy telefonlar */
+@media (min-width: 481px) and (max-width: 767px) {
+    .container-uzmanlik {
+        grid-template-columns: 1fr;
+        width: 95%;
+    }
+
+    .kart-resim {
+        height: 250px;
+    }
+
+    .kart-baslik {
+        font-size: 22px;
+    }
+
+    .kart-icerik p {
+        font-size: 18px;
+    }
+
+    button.btn-detay {
+        width: 90%;
+    }
+}
+
+/* 3. Tabletler */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container-uzmanlik {
+        grid-template-columns: repeat(2, 1fr);
+        width: 95%;
+    }
+
+    .kart-resim {
+        height: 300px;
+    }
+
+    .kart-baslik {
+        font-size: 24px;
+    }
+
+    .kart-icerik p {
+        font-size: 20px;
+    }
+
+    button.btn-detay {
+        width: 80%;
+    }
+}
