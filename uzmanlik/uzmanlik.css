@@ -202,9 +202,12 @@ nav ul.menu li a.aktif {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     text-align: left;
+    z-index: 0;
 }
 
 .kart-resim {
+    position: relative;
+    z-index: 1;
     width: 400px;
     height: 400px;
     background-size: cover;
@@ -232,12 +235,16 @@ nav ul.menu li a.aktif {
 .kart-icerik {
     position: absolute;
     bottom: 0;
+    right: 0;
+    left: 0;
     width: 100%;
     background: rgba(255, 255, 255, 0.9);
     padding: 20px;
     transform: translateY(100%);
     transition: transform 0.3s ease;
     text-align: left;
+    pointer-events: auto;
+    z-index: 2;
 }
 
 .uzmanlik-kart:hover .kart-icerik {
@@ -268,6 +275,8 @@ button {
 button.btn-detay {
     width: 12rem;
     height: auto;
+    position: relative;
+    z-index: 3;
 }
    
 button.btn-detay .circle {
@@ -356,37 +365,6 @@ button:hover .button-detay-text {
 
     .kart-icerik p {
         font-size: 18px;
-    }
-
-    /* Sekme ve içerik kutusu */
-    .dates {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .date-btn {
-        font-size: 20px;
-        padding: 10px 15px;
-    }
-
-    .content-box {
-        padding: 30px 15px;
-        width: 95%;
-    }
-
-    .content-box p,
-    .content-box h4 {
-        width: 100%;
-    }
-
-    .img-content1,
-    .img-content2,
-    .img-content3,
-    .img-content4 {
-        position: static;
-        width: 100%;
-        height: auto;
-        margin-top: 20px;
     }
 }
 
