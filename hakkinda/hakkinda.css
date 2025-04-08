@@ -609,7 +609,7 @@ nav ul.menu li a.aktif {
 /* 🔧 Mobil uyumluluk */
 @media (max-width: 768px) {
     .container-uzmanlik {
-        padding: 20px 10px;
+        padding: 10px 0px;
     }
 
     .uzmanlik {
@@ -702,6 +702,7 @@ footer p {
         z-index: 101;
         color: #000;
         cursor: pointer;
+        background: transparent;
     }
 
     nav {
@@ -734,6 +735,11 @@ footer p {
         font-size: 18px;
         padding: 10px;
         color: white;
+    }
+
+    nav ul.menu li a.aktif {
+        color: #0daaba;
+        font-weight: bold;
     }
 
     /* Eğitim bilgileri */
