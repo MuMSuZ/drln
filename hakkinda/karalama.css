@@ -88,6 +88,10 @@ nav ul.menu li a.aktif {
     font-weight: bold;
   }
 
+.menu-toggle {
+    display: none;
+}
+
 @media (max-width: 768px) {
 
     .menu-toggle {
