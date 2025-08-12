@@ -5,20 +5,37 @@
     <lastmod>2025-08-12</lastmod>
     <priority>1.0</priority>
   </url>
+
   <url>
-    <loc>https://drlemannabiyeva.com.tr/hakkinda/</loc>
+    <loc>https://drlemannabiyeva.com.tr/hakkinda/hakkinda.html</loc>
+    <lastmod>2025-08-12</lastmod>
+  </url>
+
+  <url>
+    <loc>https://drlemannabiyeva.com.tr/iletisim/iletisim.html</loc>
+    <lastmod>2025-08-12</lastmod>
+  </url>
+
+  <url>
+    <loc>https://drlemannabiyeva.com.tr/blog/blog.html</loc>
+    <lastmod>2025-08-12</lastmod>
+  </url>
+
+  <!-- Blog yazıları -->
+  <url>
+    <loc>https://drlemannabiyeva.com.tr/blog/kartlar/blog-hpv.html</loc>
     <lastmod>2025-08-12</lastmod>
   </url>
   <url>
-    <loc>https://drlemannabiyeva.com.tr/uzmanlik/</loc>
+    <loc>https://drlemannabiyeva.com.tr/blog/kartlar/blog-adet.html</loc>
     <lastmod>2025-08-12</lastmod>
   </url>
   <url>
-    <loc>https://drlemannabiyeva.com.tr/blog/</loc>
+    <loc>https://drlemannabiyeva.com.tr/blog/kartlar/blog-laparoskopi.html</loc>
     <lastmod>2025-08-12</lastmod>
   </url>
   <url>
-    <loc>https://drlemannabiyeva.com.tr/iletisim/</loc>
+    <loc>https://drlemannabiyeva.com.tr/blog/kartlar/blog-perimenopoz.html</loc>
     <lastmod>2025-08-12</lastmod>
   </url>
 </urlset>
