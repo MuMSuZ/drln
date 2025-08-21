@@ -68,4 +68,45 @@ document.getElementById("iletisimForm").addEventListener("submit", function(e) {
 });
 
 
-  
+// QR ve hash hedefine kaydırma betiği
+
+      document.addEventListener('DOMContentLoaded', function () {
+        // Hash ile gelinirse hedefe kaydır
+        if (location.hash === '#iletisim-bilgileri') {
+          const hedef = document.getElementById('iletisim-bilgileri');
+          if (hedef) hedef.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // QR oluşturma
+        const qrDiv = document.getElementById('qrcode');
+        const hedefURL = 'https://mumsuz.github.io/drln/iletisim/iletisim.html#iletisim-bilgileri';
+        if (qrDiv && window.QRCode) {
+          const qr = new QRCode(qrDiv, {
+            text: hedefURL,
+            width: 512,
+            height: 512,
+            correctLevel: QRCode.CorrectLevel.M
+          });
+
+          // İndir butonu
+          const btn = document.getElementById('qr-indir');
+          if (btn) {
+            btn.addEventListener('click', function () {
+              // qrcodejs canvas veya img oluşturabilir; ikisini de ele alalım
+              const canvas = qrDiv.querySelector('canvas');
+              const img = qrDiv.querySelector('img');
+              if (canvas) {
+                const link = document.createElement('a');
+                link.download = 'iletisim-qr.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+              } else if (img) {
+                const link = document.createElement('a');
+                link.download = 'iletisim-qr.png';
+                link.href = img.src;
+                link.click();
+              }
+            });
+          }
+        }
+      });
