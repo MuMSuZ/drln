@@ -476,3 +476,8 @@ footer p {
     color: #333;
     margin: 20px 0;
 }
+
+html { scroll-behavior: smooth; }
+
+/* Hedef bölüme gelirken üstten boşluk bırak (header yüksekliğinize göre ayarlayın) */
+#iletisim-bilgileri { scroll-margin-top: 100px; }
