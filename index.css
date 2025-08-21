@@ -177,7 +177,7 @@ nav ul.menu li a.aktif {
     display: inline-block;
     position: absolute;
     left: 50px;
-    bottom: 40px;
+    bottom: 60px;
     background: #0D98BA;
     color: white;
     padding: 15px 30px;
@@ -199,7 +199,7 @@ nav ul.menu li a.aktif {
     text-decoration: none;
     border-radius: 25px;
     font-size: 22px;
-    margin-top: 80px;
+    margin-top: 200px;
 }
 
 .btn-tani:hover {

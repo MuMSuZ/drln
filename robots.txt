@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://drlemannabiyeva.com.tr/sitemap.xml
