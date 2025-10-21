@@ -207,6 +207,7 @@ nav ul.menu li a.aktif {
   height: 0;
   overflow: hidden;
   max-width: 100%;
+  border-radius: 8xp;  
 }
 
 .video-container iframe {
