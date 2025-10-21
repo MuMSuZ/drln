@@ -195,7 +195,7 @@ nav ul.menu li a.aktif {
 /* Video Alanı*/
 
 .video-container {
-  position: relative;
+  position: center;
   padding-bottom: 56.25%; /* 16:9 oran */
   height: 0;
   overflow: hidden;
