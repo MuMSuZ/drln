@@ -194,8 +194,15 @@ nav ul.menu li a.aktif {
   
 /* Video Alanı*/
 
+.video-wrapper {
+  display: flex;
+  justify-content: center; /* Yatayda ortala */
+  align-items: center;     /* Dikeyde ortala */
+  height: 100vh;           /* Ekran yüksekliği kadar yer kaplasın */
+}
+
 .video-container {
-  position: center;
+  position: relative;
   padding-bottom: 56.25%; /* 16:9 oran */
   height: 0;
   overflow: hidden;
