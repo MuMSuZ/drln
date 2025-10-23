@@ -408,14 +408,15 @@ nav ul.menu li a.aktif {
     flex-direction: column;
   }
 
-  .video-container,
+  .short-container,
   .video-text {
     flex: 1 1 100%;
   }
 
-  .video-container {
+  .short-container {
     height: 220px;
   }
+
 }
 
 
