@@ -357,16 +357,22 @@ nav ul.menu li a.aktif {
   margin-bottom: 40px;
 }
 
-.video-container {
+.short-container {
   flex: 1 1 50%;
-  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #000;
 }
 
-.video-container iframe {
+.short-container iframe {
   width: 100%;
-  height: 100%;
+  max-width: 270px; /* Shorts videolar için ideal */
+  aspect-ratio: 9 / 16;
   border: none;
 }
+
 
 .video-text {
   flex: 1 1 50%;
