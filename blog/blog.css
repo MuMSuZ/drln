@@ -415,7 +415,7 @@ img, video, iframe {
   text-decoration: underline;
 }
 
-/* Responsive */
+/* Responsive 
 @media (max-width: 768px) {
   .blog-video-card {
     flex-direction: column;
@@ -427,11 +427,35 @@ img, video, iframe {
   }
 
   .short-container {
-    /*height: 220px;*/
     padding: 0;
   }
 
+}*/
+
+@media (max-width: 768px) {
+  .blog-video-card {
+    display: flex;
+    flex-direction: column !important; /* Önceliği artırıyoruz */
+    align-items: center;
+  }
+
+  .short-container,
+  .video-text {
+    width: 100%;
+    flex: none; /* flex-basis ve büyüme kısıtlaması kaldırıldı */
+  }
+
+  .short-container {
+    padding: 0;
+    display: block; /* içerideki flex etkisini sıfırlar */
+  }
+
+  .video-text {
+    text-align: center; /* mobilde ortala */
+  }
 }
+
+
 
 
 
