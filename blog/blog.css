@@ -203,19 +203,32 @@ nav ul.menu li a.aktif {
 
 .video-container {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 oran */
+  /*padding-bottom: 56.25%;  16:9 oran */
+  aspect-ratio: 16/9;
   height: 0;
   overflow: hidden;
   max-width: 100%;
-  border-radius: 8xp;  
 }
 
 .video-container iframe {
   position: absolute;
-  top: 0;
-  left: 0;
+  /*top: 0;
+  left: 0;*/
+  inset: 0;
   width: 100%;
   height: 100%;
+}
+
+/* Medyaları akışkan yap */
+
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.embed-fluid, .video-container, .short-container {
+    overflow: hidden;
 }
 
 /* Grid Yapısı */
@@ -368,7 +381,7 @@ nav ul.menu li a.aktif {
 
 .short-container iframe {
   width: 100%;
-  max-width: 270px; /* Shorts videolar için ideal */
+  /*max-width: 270px; Shorts videolar için ideal */
   aspect-ratio: 9 / 16;
   border: none;
 }
@@ -416,7 +429,8 @@ nav ul.menu li a.aktif {
   }
 
   .short-container {
-    height: 220px;
+    /*height: 220px;*/
+    padding: 0;
   }
 
 }
