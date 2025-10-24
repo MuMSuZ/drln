@@ -381,12 +381,14 @@ nav ul.menu li a.aktif {
 
 .video-text h3 {
   font-size: 1.2rem;
+  line-height: 1.5em;
   margin-bottom: 10px;
   color: #2c3e50;
 }
 
 .video-text p {
   font-size: 0.95rem;
+  line-height: 1.5em;
   color: #555;
   margin-bottom: 15px;
 }
